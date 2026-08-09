@@ -694,8 +694,20 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
   let failedAttempts = 0;
 
   function getManifestGallery(button) {
-    const key = button.dataset.galleryKey || '';
-    return Array.isArray(portfolioManifest[key]) ? portfolioManifest[key] : [];
+    const key = (button.dataset.galleryKey || '').trim();
+    if (!key) return [];
+    if (Array.isArray(portfolioManifest[key]) && portfolioManifest[key].length > 0) {
+      return portfolioManifest[key];
+    }
+    const lowerKey = key.toLowerCase();
+    for (const [folderName, images] of Object.entries(portfolioManifest)) {
+      if (Array.isArray(images) && images.length > 0) {
+        if (folderName.toLowerCase() === lowerKey || folderName.toLowerCase().includes(lowerKey) || lowerKey.includes(folderName.toLowerCase())) {
+          return images;
+        }
+      }
+    }
+    return [];
   }
 
   function buildGallery(button) {
@@ -703,6 +715,7 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
     if (manualGallery.length) return manualGallery;
 
     const folderImages = getManifestGallery(button);
+    if (folderImages.length <= 1) return folderImages;
     return folderImages.slice(1);
   }
 

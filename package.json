@@ -1,7 +1,7 @@
 {
     "scripts":  {
                     "dev":  "node local-server.js",
-                    "build": "echo 'No build required for static server'",
+                    "build": "node portfolio-manifest.js",
                     "audit":  "node audit-assets.js",
                     "localize":  "node localize-assets.js",
                     "portfolio":  "node portfolio-manifest.js"
