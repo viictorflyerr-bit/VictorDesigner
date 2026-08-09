@@ -1,0 +1,8 @@
+{
+  "name": "Victor Designer",
+  "description": "Portfolio and design showcase site for Victor Designer",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
