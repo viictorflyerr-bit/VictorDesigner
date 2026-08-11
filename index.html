@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+	<script>
+	(function() {
+	  try {
+	    var _f = window.fetch;
+	    var desc = Object.getOwnPropertyDescriptor(window, 'fetch') || (Object.getPrototypeOf(window) ? Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch') : null);
+	    if (desc && desc.get && !desc.set) {
+	      Object.defineProperty(window, 'fetch', {
+	        get: function() { return _f; },
+	        set: function(v) { _f = v; },
+	        configurable: true,
+	        enumerable: true
+	      });
+	    }
+	  } catch (e) {}
+	})();
+	</script>
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -300,48 +316,48 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				</div>
 		<section class="victor-portfolio" id="portfolio">
 			<div class="victor-portfolio__inner">
-				<div class="victor-portfolio__header">
+				<div class="victor-portfolio__header scroll-top">
 					<p class="victor-portfolio__eyebrow">PORTFOLIO</p>
 					<h2>Trabalhos recentes</h2>
 					<span>Cada projeto é único — criado para gerar resultados reais para os meus clientes.</span>
 				</div>
 				<div class="victor-portfolio__grid">
-					<article class="victor-portfolio__card">
+					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0s;">
 						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Zapz - Reparo Express" data-category="" data-gallery-key="Zapz - Reparo Express">
 							<img alt="Capa do projeto Identidade Visual" loading="lazy" hidden>
 							<span>Zapz - Reparo Express</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Zapz - Reparo Express</h3><p>Clique para ver mais</p></div>
 					</article>
-					<article class="victor-portfolio__card">
+					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.12s;">
 						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Kameleon" data-category="" data-gallery-key="Social Media - Kameleon">
 							<img alt="Capa do projeto Social Media" loading="lazy" hidden>
 							<span>Social Media - Kameleon</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Social Media - Kameleon</h3><p>Clique para ver mais</p></div>
 					</article>
-					<article class="victor-portfolio__card">
+					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.24s;">
 						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Alex Vieira - Identidade Visual" data-category="" data-gallery-key="Alex Vieira - Identidade Visual">
 							<img alt="Capa do projeto Landing Page" loading="lazy" hidden>
 							<span>Alex Vieira - Identidade Visual</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Alex Vieira - Identidade Visual</h3><p>Clique para ver mais</p></div>
 					</article>
-					<article class="victor-portfolio__card">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Plaza Bank - Identidade Visual" data-category="" data-gallery-key="Plaza Bank - Identidade Visual">
+					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.08s;">
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Corretora de Imóveis" data-category="" data-gallery-key="Social Media - Corretora de Imóveis">
 							<img alt="Capa do projeto Manipulacao" loading="lazy" hidden>
-							<span>Plaza Bank - Identidade Visual</span>
+							<span>Social Media - Corretora de Imóveis</span>
 						</button>
-						<div class="victor-portfolio__content"><h3>Plaza Bank - Identidade Visual</h3><p>Clique para ver mais</p></div>
+						<div class="victor-portfolio__content"><h3>Social Media - Corretora de Imóveis</h3><p>Clique para ver mais</p></div>
 					</article>
-					<article class="victor-portfolio__card">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Maru - Comida Japonesa" data-category="" data-gallery-key="Maru - Comida Japonesa">
+					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.2s;">
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Branding - Stadler Grellmann Advogados" data-category="" data-gallery-key="Branding - Stadler Grellmann Advogados">
 							<img alt="Capa do projeto UI Concept" loading="lazy" hidden>
-							<span>Maru - Comida Japonesa</span>
+							<span>Branding - Stadler Grellmann Advogados</span>
 						</button>
-						<div class="victor-portfolio__content"><h3>Maru - Comida Japonesa</h3><p>Clique para ver mais</p></div>
+						<div class="victor-portfolio__content"><h3>Branding - Stadler Grellmann Advogados</h3><p>Clique para ver mais</p></div>
 					</article>
-					<article class="victor-portfolio__card">
+					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.32s;">
 						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Mais um Voo & Skychat - Social Media" data-category="" data-gallery-key="Mais um Voo & Skychat - Social Media">
 							<img alt="Capa do projeto Campanha" loading="lazy" hidden>
 							<span>Mais um Voo & Skychat - Social Media</span>
@@ -414,13 +430,13 @@ document.addEventListener("DOMContentLoaded", function() {
 				<div class="elementor-element elementor-element-c2f1a1d elementor-widget elementor-widget-html" data-id="c2f1a1d" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
 					<script>
-const elementos = document.querySelectorAll(".scroll-left, .scroll-left2, .scroll-right, .scroll-right2, .scroll-top, .scroll-top2, .scroll-bottom, .scroll-bottom2, .scroll-escala, .scroll-txt, .perspectivax");
 function fadeScroll() {
   const alturaJanela = window.innerHeight;
+  const elementos = document.querySelectorAll(".scroll-left, .scroll-left2, .scroll-right, .scroll-right2, .scroll-top, .scroll-top2, .scroll-bottom, .scroll-bottom2, .scroll-escala, .scroll-txt, .perspectivax");
 
   elementos.forEach(elemento => {
     const elementoTop = elemento.getBoundingClientRect().top;
-    if (elementoTop < alturaJanela * 0.85) {
+    if (elementoTop < alturaJanela * 0.88) {
       elemento.classList.add("ativo7");
     } else {
       elemento.classList.remove("ativo7");
@@ -509,7 +525,6 @@ window.addEventListener("scroll", fadeScroll);
     transition: 1s;
     filter: blur(0px);
     transform: translate(0, 0px) scale(1);
-    transition-delay: 0s !important;
 }
 </style>				</div>
 				</div>
@@ -639,13 +654,19 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
 		<div class="victor-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Galeria do portfolio">
 			<div class="victor-lightbox__backdrop" data-lightbox-close></div>
 			<div class="victor-lightbox__panel">
-				<button class="victor-lightbox__close" type="button" aria-label="Fechar" data-lightbox-close>&times;</button>
-				<button class="victor-lightbox__nav victor-lightbox__nav--prev" type="button" aria-label="Arte anterior" data-lightbox-prev>&lsaquo;</button>
+				<button class="victor-lightbox__close" type="button" aria-label="Fechar" data-lightbox-close>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+				</button>
+				<button class="victor-lightbox__nav victor-lightbox__nav--prev" type="button" aria-label="Arte anterior" data-lightbox-prev>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+				</button>
 				<figure class="victor-lightbox__figure">
 					<img class="victor-lightbox__image" src="" alt="">
 					<figcaption class="victor-lightbox__caption"><strong></strong><span></span></figcaption>
 				</figure>
-				<button class="victor-lightbox__nav victor-lightbox__nav--next" type="button" aria-label="Proxima arte" data-lightbox-next>&rsaquo;</button>
+				<button class="victor-lightbox__nav victor-lightbox__nav--next" type="button" aria-label="Proxima arte" data-lightbox-next>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+				</button>
 			</div>
 		</div>
 		<script>
@@ -688,7 +709,113 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
   const category = lightbox.querySelector('.victor-lightbox__caption span');
   const prev = lightbox.querySelector('[data-lightbox-prev]');
   const next = lightbox.querySelector('[data-lightbox-next]');
-  let portfolioManifest = {};
+  const DEFAULT_MANIFEST = {
+    "Alex Vieira - Identidade Visual": [
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_14_40732f1e-994b-4696-8a43-46dcae459b26.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_26_1703db34-a785-4b85-ac1e-b8e030eb6bb9.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_29_4c1ef26f-b6b7-4956-b957-caf414a19444.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_31_f261c1cc-5e9f-4e2f-9bbf-405c9a46c683.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_36_8376f825-c4ae-423e-b12d-f9ebcea343b6.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_41_810dc3d0-a3e6-40d7-a32a-3aa1f1b3b19b.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_46_1d85e4f6-5db6-4438-9efe-098f2d554c0d.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_51_020c2989-8415-40bc-8623-b5257c2bfd8d.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_56_ae37f143-aba7-4513-813e-1a35855759ec.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_61_4b07dd49-590d-485a-ada0-6cc9088afe14.png"
+    ],
+    "Branding - Stadler Grellmann Advogados": [
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472603196.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472606745.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472609417.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472611926.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472614497.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472617980.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472621119.webp",
+      "/wp-content/uploads/portfolio/Branding%20-%20Stadler%20Grellmann%20Advogados/BRANDING%20-%20STADLER%20GRELLMANN%20ADVOGADOS_1786472623796.webp"
+    ],
+    "Mais um Voo & Skychat - Social Media": [
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_43_e6634e229264879.686224c96891f.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_44_e482a8229264879.686224c96904e.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_45_379179229264879.686224c96746b.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_46_118241229264879.686224c967deb.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_47_617ce5229264879.686224c968268.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_57_f13a3b229264879.686224ccb81b7.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_59_4ed49e229264879.686224ccb7711.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_60_72e6c5229264879.686224ccb5ab2.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_61_3ee7b4229264879.686224ccb62c4.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_62_fc8d31229264879.686224ccb70c3.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_63_fe7e0b229264879.686224ccb7b4b.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_65_86bd72229264879.686224ccb5ed8.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_66_40d3e1229264879.686224ccb66a6.png"
+    ],
+    "Social Media - Corretora de Imóveis": [
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/04.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_40_1409ea161156353.651df8b855415.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_41_8c67dd161156353.651df8b855d7e.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_42_f18d8f161156353.651df8b8547d3.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_43_6e787f161156353.651df8b8be5f5.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_44_995f1b161156353.651df8b8bd024.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_45_d8431e161156353.651df8b8bf10d.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_46_c4dcec161156353.651df8b95a5d2.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_48_d5af30161156353.651df8b959a80.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_49_1c83d5a5-99b3-4346-a510-fc6747ac6b8b_rw_1920.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_49_cc9d9f161156353.651df8b9f1a1d.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_50_fb47e2161156353.651df8b9f25c5.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_51_1b4ba9161156353.651df8b9f0ba0.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_52_930fe4161156353.651df8bb5d255.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_54_f161f9161156353.651df8bb5dcd5.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_55_b80e92161156353.640fe3247add5.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_56_b40c35161156353.640fe32479d38.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_57_b0ab63161156353.640fe3247bbe4.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_58_c4921b161156353.63ec111b8fcfa.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_59_41304e161156353.63ec111b90f67.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_60_776f80161156353.63ec111b92167.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_61_6ffd39161156353.63c047d6d7157.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_62_841209161156353.63c047d6d67e9.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_63_4e41c1161156353.63c047d6d7b4a.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_64_4a4432161156353.63f6d96d95977.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_65_27e129161156353.63f6d96d93f5a.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_66_e2f48d161156353.63f6d96d94ca9.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_68_ce97f6161156353.63c047d7768db.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_69_e1e035161156353.63c047d777a20.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_70_6d1697161156353.63c046d81e58d.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Corretora%20de%20Im%C3%B3veis/imgi_71_9df795161156353.63c046d81cf48.png"
+    ],
+    "Social Media - Kameleon": [
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_41_4a6399233181427.68ab065fb4194.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_43_b1f561233181427.68ab06607f6bb.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_45_2cd00a233181427.68ab06607ea22.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_46_ad8293233181427.68ab066138afe.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_47_73972c233181427.68ab066137e68.png"
+    ],
+    "Zapz - Reparo Express": [
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_18_2e88d98d-9cde-41db-ae6f-8ec8ae82e5f3.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_20_c084acd8-300f-44c6-9e23-cc8baeff16e2.gif",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_25_4c69ca7b-c7c3-4a56-821a-d0cb09546490_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_28_437301fe-6ef8-4e12-8e09-56c0ae97d77a.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_32_694f444d-669c-4450-ab36-9ca210a9d894.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_36_5cdc0f61-3d65-4dc1-a43a-7f53a0ec5572.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_41_064244b0-bdca-4d89-b235-ab0521f6be15_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_45_d1e37a0d-5cba-4b3d-9279-46cbbf6557b3_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_49_1d7da95b-099e-45e6-bc8c-02f7ce5c1605_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_52_7eda4ece-0435-4397-a9aa-ee6b5e9c6d44.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_57_3ae1a1bd-6687-4857-9062-a1c2cb661abd_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_61_1d2e9727-845e-42f5-ad2e-dbe3ed2d8d83_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_64_bd2fdb30-dd4c-4091-9c35-2b21fa63d44c.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_68_33d2f99c-6f0d-42d4-81cf-a4e6b38deb34.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_76_b2f445d1-ce34-468d-a740-0de5fb3e47c2.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_80_9a16fc22-81cc-4778-bb64-aeaeba1faa0e.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_84_bea736b4-1901-4714-9bc3-1c89000ddcd7.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_88_18e64c9f-3a26-449e-aa5b-cd5dfd346213.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_92_ac420e36-9499-4aef-9bc9-a1a7d76ab3cc.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_96_b9c40e1c-104c-4616-9cc8-9042373f3066.png"
+    ]
+  };
+
+  let portfolioManifest = DEFAULT_MANIFEST;
   let gallery = [];
   let index = 0;
   let failedAttempts = 0;
@@ -742,16 +869,17 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
     document.querySelectorAll('.js-portfolio-open').forEach(updateCardCover);
   }
 
+  applyPortfolioCovers();
+
   const manifestReady = fetch(manifestUrl, { cache: 'no-store' })
-    .then((response) => response.ok ? response.json() : {})
+    .then((response) => response.ok ? response.json() : null)
     .then((manifest) => {
-      portfolioManifest = manifest || {};
-      applyPortfolioCovers();
+      if (manifest && Object.keys(manifest).length > 0) {
+        portfolioManifest = manifest;
+        applyPortfolioCovers();
+      }
     })
-    .catch(() => {
-      portfolioManifest = {};
-      applyPortfolioCovers();
-    });
+    .catch(() => {});
 
   function showImage(resetErrors = true) {
     if (resetErrors) failedAttempts = 0;
