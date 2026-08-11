@@ -25,7 +25,7 @@ function buildPortfolioManifest() {
       const folderPath = path.join(portfolioRoot, folder);
       const allFiles = fs
         .readdirSync(folderPath, { withFileTypes: true })
-        .filter((entry) => entry.isFile() && imageExtensions.has(path.extname(entry.name).toLowerCase()))
+        .filter((entry) => entry.isFile() && !entry.name.startsWith("temp_") && imageExtensions.has(path.extname(entry.name).toLowerCase()))
         .map((entry) => entry.name);
 
       // Group by base name (e.g., '01', '02')
