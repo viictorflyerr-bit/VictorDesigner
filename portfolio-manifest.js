@@ -1,4 +1,4 @@
-﻿const fs = require("fs");
+const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
@@ -7,7 +7,7 @@ const outputPath = path.join(portfolioRoot, "portfolio-manifest.json");
 const imageExtensions = new Set([".webp", ".jpg", ".jpeg", ".png", ".gif", ".avif"]);
 
 function toUrl(folder, file) {
-  return "/wp-content/uploads/portfolio/" + [folder, file].map(encodeURIComponent).join("/");
+  return `/wp-content/uploads/portfolio/${folder}/${file}`;
 }
 
 function buildPortfolioManifest() {
