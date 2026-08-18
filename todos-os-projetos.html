@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/favicon.png" />
+	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+	<link rel="apple-touch-icon" href="/favicon.png" />
+	<title>Todos os Projetos - Victor Designer</title>
+	<meta name="robots" content="index, follow" />
+	<link rel="preconnect" href="https://i.postimg.cc" crossorigin />
+	<link rel="dns-prefetch" href="https://i.postimg.cc" />
+	<link rel="preconnect" href="https://i.ibb.co" crossorigin />
+	<link rel="dns-prefetch" href="https://i.ibb.co" />
+	
+	<link data-minify="1" rel='stylesheet' id='hello-elementor-css' href='/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/reset.css?ver=1779831945' media='all' />
+	<link data-minify="1" rel='stylesheet' id='hello-elementor-theme-style-css' href='/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/theme.css?ver=1779831945' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css' href='/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1779822422' media='all' />
+	<link rel='stylesheet' id='elementor-post-5-css' href='/wp-content/uploads/elementor/css/post-5.css?ver=1779822422' media='all' />
+	<link rel='stylesheet' id='elementor-post-16431-css' href='/wp-content/uploads/elementor/css/post-16431.css' media='all' />
+
+	<style>
+		@font-face {
+			font-family: 'Questrial';
+			font-style: normal;
+			font-weight: normal;
+			src: url('/wp-content/uploads/2025/10/Questrial-Regular.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'ORBITRON';
+			font-style: normal;
+			font-weight: bold;
+			src: url('/wp-content/uploads/2025/11/Orbitron-Regular.ttf') format('truetype');
+		}
+		@font-face {
+			font-family: 'Fellix';
+			font-style: normal;
+			font-weight: normal;
+			src: url('/wp-content/uploads/2025/11/Fellix-TRIAL-Light.ttf') format('truetype');
+		}
+
+		body {
+			background-color: #020b1f;
+			color: #ffffff;
+			font-family: 'Questrial', sans-serif;
+			margin: 0;
+			padding: 0;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.page-header {
+			position: sticky;
+			top: 0;
+			z-index: 100;
+			background: rgba(2, 11, 31, 0.92);
+			backdrop-filter: blur(12px);
+			border-bottom: 1px solid rgba(0, 126, 255, 0.2);
+			padding: 16px 24px;
+		}
+
+		.page-header__inner {
+			max-width: 1200px;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.page-header__brand {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			text-decoration: none;
+			color: #ffffff;
+			font-family: 'ORBITRON', sans-serif;
+			font-weight: 700;
+			font-size: 18px;
+			letter-spacing: 0.1em;
+		}
+
+		.page-header__brand span {
+			color: #007eff;
+		}
+
+		.page-header__back {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			padding: 10px 22px;
+			background: rgba(0, 126, 255, 0.1);
+			border: 1px solid rgba(0, 126, 255, 0.4);
+			border-radius: 999px;
+			color: #ffffff;
+			font-family: 'ORBITRON', sans-serif;
+			font-size: 12px;
+			letter-spacing: 0.1em;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+
+		.page-header__back:hover {
+			background: rgba(0, 126, 255, 0.25);
+			border-color: #67c1ff;
+			color: #ffffff;
+			transform: translateX(-3px);
+			box-shadow: 0 0 15px rgba(0, 126, 255, 0.3);
+		}
+
+		.hero-section {
+			text-align: center;
+			padding: 60px 20px 30px;
+			max-width: 900px;
+			margin: 0 auto;
+		}
+
+		.hero-section__badge {
+			display: inline-block;
+			font-family: 'ORBITRON', sans-serif;
+			font-size: 12px;
+			letter-spacing: 0.2em;
+			color: #67c1ff;
+			background: rgba(0, 126, 255, 0.15);
+			border: 1px solid rgba(0, 126, 255, 0.35);
+			padding: 6px 18px;
+			border-radius: 999px;
+			margin-bottom: 16px;
+			text-transform: uppercase;
+		}
+
+		.hero-section__title {
+			font-family: 'Fellix', sans-serif;
+			font-size: 42px;
+			font-weight: 700;
+			margin: 0 0 12px;
+			color: #ffffff;
+			text-shadow: 0 0 20px rgba(0, 126, 255, 0.2);
+		}
+
+		.hero-section__desc {
+			font-size: 16px;
+			color: rgba(255, 255, 255, 0.7);
+			margin: 0 auto;
+			max-width: 600px;
+			line-height: 1.6;
+		}
+
+		.portfolio-container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px 80px;
+			width: 100%;
+			flex: 1;
+		}
+
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 24px;
+		}
+
+		@media (max-width: 991px) {
+			.gallery-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			.hero-section__title {
+				font-size: 32px;
+			}
+		}
+
+		@media (max-width: 640px) {
+			.gallery-grid {
+				grid-template-columns: 1fr;
+			}
+			.hero-section__title {
+				font-size: 26px;
+			}
+		}
+
+		.page-footer {
+			background: rgba(1, 7, 20, 0.95);
+			border-top: 1px solid rgba(0, 126, 255, 0.15);
+			padding: 30px 20px;
+			text-align: center;
+			font-size: 14px;
+			color: rgba(255, 255, 255, 0.5);
+			margin-top: auto;
+		}
+
+		.page-footer a {
+			color: #67c1ff;
+			text-decoration: none;
+		}
+
+		.page-footer a:hover {
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+
+	<header class="page-header">
+		<div class="page-header__inner">
+			<a href="index.html" class="page-header__brand" target="_self">
+				VICTOR <span>DESIGNER</span>
+			</a>
+			<a href="index.html" class="page-header__back" target="_self">
+				<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="19" y1="12" x2="5" y2="12"></line>
+					<polyline points="12 19 5 12 12 5"></polyline>
+				</svg>
+				VOLTAR AO INÍCIO
+			</a>
+		</div>
+	</header>
+
+	<main class="portfolio-container">
+		<section class="hero-section">
+			<span class="hero-section__badge">PORTFÓLIO COMPLETO</span>
+			<h1 class="hero-section__title">Todos os Projetos & Artes</h1>
+			<p class="hero-section__desc">
+				Confira a coleção completa de trabalhos desenvolvidos por Victor Designer.
+			</p>
+		</section>
+
+		<div class="victor-portfolio__grid gallery-grid" id="all-projects-grid">
+			<!-- 6 Primeiros Novos Cards -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Apostamax - Criativos" data-category="Criativos &amp; Social Media" data-gallery-key="Apostamax - Criativos" data-cover="https://i.postimg.cc/RVS5PHBH/CAPA.png" data-gallery="https://i.postimg.cc/RVS5PHBH/CAPA.png|https://i.postimg.cc/VLfQ7C8r/imgi-54-fc4780247674263-69e043d5bd178.png|https://i.postimg.cc/wTq8WmpR/imgi-56-4d3fc9247674263-69e043d5bd7dc.png|https://i.postimg.cc/3J85LvTy/imgi-58-f1ba01247674263-69e043d666aa2.png|https://i.postimg.cc/02kRtwsm/imgi-61-372608247674263-69e043d6659b6.png|https://i.postimg.cc/RVS5PHBc/imgi-64-1dc6dc247674263-69e043d710f0e.png|https://i.postimg.cc/ncFbdDJY/imgi-66-619173247674263-69e043d806af9.png|https://i.postimg.cc/fTznH9N7/imgi-68-6f93de247674263-69e043d8079e5.png|https://i.postimg.cc/28kRHZD7/imgi-70-a8c03f247674263-69e043d8ada09.png|https://i.postimg.cc/Fsr5PL4x/imgi-72-75dce7247674263-69e043d8ae1a0.png|https://i.postimg.cc/GhLwMyCQ/imgi-74-82e651247674263-69e043d955e62.png|https://i.postimg.cc/sDjdnhrm/imgi-76-a6563c247674263-69e043d95659b.png|https://i.postimg.cc/bNyc6thL/imgi-78-e40265247674263-69e043d9f345c.png|https://i.postimg.cc/J4rVTkLP/imgi-80-902d90247674263-69e043d9f25b8.png|https://i.postimg.cc/8PZ8xzph/imgi-82-d15d04247674263-69e043dacf06a.png|https://i.postimg.cc/xT6rB1fv/imgi-85-27f16f247674263-69e043dacde62.png">
+					<img src="https://i.postimg.cc/RVS5PHBH/CAPA.png" alt="Capa Apostamax - Criativos" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Apostamax - Criativos</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Apostamax - Criativos</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Agência de Tráfego Pago" data-category="Social Media" data-gallery-key="Social Media - Agência de Tráfego Pago" data-cover="https://i.postimg.cc/DwhgQr3n/CAPA.png" data-gallery="https://i.postimg.cc/DwhgQr3n/CAPA.png|https://i.postimg.cc/FHvZbyXh/imgi-11-12c883219119763-67aca656abd7c.png|https://i.postimg.cc/Sx4rL6by/imgi-12-89ee34219119763-67aca656ae043.png|https://i.postimg.cc/Hkm20w1Y/imgi-13-f8482d219119763-67aca656acbd4.png|https://i.postimg.cc/K8bN7Phc/imgi-14-e762af219119763-67aca656ac4d5.png|https://i.postimg.cc/qvrLcsHv/imgi-15-69dd57219119763-67aca656ad2a8.png|https://i.postimg.cc/cLccFvdZ/imgi-16-23478f219119763-67aca656ae721.png|https://i.postimg.cc/nh113Xnn/imgi-17-38553b219119763-67aca656ad96e.png|https://i.postimg.cc/6phhM8B0/imgi-18-9ffdcc219119763-67aca657d4805.png|https://i.postimg.cc/x1PP6X91/imgi-19-2c1ab4219119763-67aca657d422c.png|https://i.postimg.cc/GmjjX4b4/imgi-20-fb2746219119763-67aca657d3c2d.png|https://i.postimg.cc/Hktt6rTn/imgi-21-daee57219119763-67aca658b4ab7.png|https://i.postimg.cc/2Sxx01CF/imgi-22-b23f6d219119763-67aca658b4f74.png|https://i.postimg.cc/T3cctKTb/imgi-23-da7eed219119763-67aca658b570f.png|https://i.postimg.cc/13KKv8yK/imgi-24-daf434219119763-67aca659e6273.png|https://i.postimg.cc/x1PP6X93/imgi-25-6827d7219119763-67aca659e5d8f.png|https://i.postimg.cc/qvGG1Npw/imgi-26-b20e8e219119763-67aca659e56bb.png|https://i.postimg.cc/9fFYKcfq/imgi-27-27507b219119763-67aca659e6769.png|https://i.postimg.cc/BvQBkJvx/imgi-28-aa3c79219119763-67aca659e6c7f.png|https://i.postimg.cc/mr2yJTr6/imgi-29-fc19c7219119763-67aca65b29002.png|https://i.postimg.cc/k5Xvz751/imgi-30-74cdf4219119763-67aca65b2970b.png|https://i.postimg.cc/fbTfpMbr/imgi-31-8deae7219119763-67aca65b2887a.png">
+					<img src="https://i.postimg.cc/DwhgQr3n/CAPA.png" alt="Capa Social Media - Agência de Tráfego Pago" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Social Media - Agência de Tráfego Pago</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Agência de Tráfego Pago</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Ana Castro" data-category="Social Media" data-gallery-key="Social Media - Ana Castro" data-cover="https://i.postimg.cc/zGg31F8f/CAPA.png" data-gallery="https://i.postimg.cc/zGg31F8f/CAPA.png|https://i.postimg.cc/RZHqzL4F/imgi-16-3af3c7d6-ab76-49fb-8691-46fa19f57d18.png|https://i.postimg.cc/kgbDdvq2/imgi-17-728b0e99-191e-4b7d-be46-edd6af9e155a.png|https://i.postimg.cc/Z5d0hx40/imgi-18-6a4fce84-5b6c-4895-95f9-636f71ca773b.png|https://i.postimg.cc/6pvTNft2/imgi-33-89421f15-5c13-4787-9608-80e1ce8a6289.png|https://i.postimg.cc/dVyDKjwZ/imgi-35-d491a3ac-8e07-42a8-bab8-11267763ace2.png|https://i.postimg.cc/3xvWHFYv/imgi-37-3da60a78-7692-4ac8-a5e3-8a9a3c43977e.png|https://i.postimg.cc/bwtdj9pn/imgi-41-8d85e974-b1e4-48bc-861e-ac562937948e.png">
+					<img src="https://i.postimg.cc/zGg31F8f/CAPA.png" alt="Capa Social Media - Ana Castro" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Social Media - Ana Castro</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Ana Castro</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Cbeer Bar" data-category="Social Media" data-gallery-key="Social Media - Cbeer Bar" data-cover="https://i.postimg.cc/t4ZDQwsF/CAPA.png" data-gallery="https://i.postimg.cc/t4ZDQwsF/CAPA.png|https://i.postimg.cc/mgvjbj9J/imgi-10-71c7dd22-68c3-4f3d-b92d-e639aa3dd42c-rw-1200.png|https://i.postimg.cc/jSpcscfB/imgi-11-8a71a6f3-5a9d-420c-8441-6ebe79347247-rw-1200.png|https://i.postimg.cc/Jzfx1xJV/imgi-12-bafd8ac4-fcd4-41de-af62-591bae16bd58-rw-1200.png|https://i.postimg.cc/sgkmVmSR/imgi-13-e0dd643a-c7bf-4800-8f1b-f6305e13742e-rw-1200.png|https://i.postimg.cc/3xs1K1pK/imgi-14-1b828cd5-ef61-4bd6-ba0c-fd9be43abad1-rw-1200.png|https://i.postimg.cc/Qd2mXm5N/imgi-15-b0e61585-9567-4dd5-88cc-e9442e7c70c8-rw-1200.png|https://i.postimg.cc/0yTn8nmy/imgi-16-0e927e0c-fa3f-4be0-acc2-faee950d5ae4-rw-1200.png|https://i.postimg.cc/8CLHsvBg/imgi-17-1cf310f1-c1fa-465c-81b2-6f48735f96d5-rw-1200.png|https://i.postimg.cc/8CLHsvBD/imgi-18-3e422b7a-c22d-4ff8-8837-adbb0319fb53-rw-1200.png|https://i.postimg.cc/nLqkMmYc/imgi-19-40661dd1-eeb3-490b-8406-e848c1d64627-rw-1200.png|https://i.postimg.cc/8zJwQ97H/imgi-2-48f77da7-1703-4c8f-b9b2-d5164cf28726-rw-1920.png|https://i.postimg.cc/7ZGX8d5g/imgi-3-f7df8f4b-7b73-4dec-9a06-a9a79b71a8a6-rw-1200.png|https://i.postimg.cc/Hkc3DRr4/imgi-4-c291321d-872c-4854-89af-2c65631bf540-rw-1200.png|https://i.postimg.cc/K8kQSw10/imgi-5-670a6667-d2ac-4e25-8258-9b95595dd203-rw-1200.png|https://i.postimg.cc/vZgXFk4q/imgi-6-fc48b0ad-1f37-4599-852f-3872c3f55321-rw-1200.png|https://i.postimg.cc/6pkc9cZL/imgi-7-10127928-a1f3-430f-9bfd-7d1c55619af4-rw-1920.png|https://i.postimg.cc/mgvjbj9m/imgi-8-63706db1-06d2-41bc-bb04-9173927c2971-rw-1200.png|https://i.postimg.cc/L8cDHDPC/imgi-9-555db94d-1287-407b-9cfc-f1815425228d-rw-1200.png">
+					<img src="https://i.postimg.cc/t4ZDQwsF/CAPA.png" alt="Capa Social Media - Cbeer Bar" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Social Media - Cbeer Bar</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Cbeer Bar</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Dra. Edirlene Dentista" data-category="Social Media" data-gallery-key="Social Media - Dra. Edirlene Dentista" data-cover="https://i.postimg.cc/2yDM0TN1/CAPA.png" data-gallery="https://i.postimg.cc/2yDM0TN1/CAPA.png|https://i.postimg.cc/0j03Fm9Z/imgi-10-78eb17254128607-6a7b3042f127a.png|https://i.postimg.cc/kGvZz87H/imgi-11-9e19f9254128607-6a7b3042f0be1.png|https://i.postimg.cc/D0PDHs2V/imgi-12-7960ff254128607-6a7b3042f056a.png|https://i.postimg.cc/yxy5t972/imgi-13-852980254128607-6a7b304395ff2.png|https://i.postimg.cc/1RGL8xDV/imgi-14-5b0e40254128607-6a7b304395af5.png|https://i.postimg.cc/wT9nJWk2/imgi-15-df1b1c254128607-6a7b3043956ae.png|https://i.postimg.cc/dtJgdW9S/imgi-16-f28f9d254128607-6a7b304430134.png|https://i.postimg.cc/NfQZTNxz/imgi-17-fee414254128607-6a7b30442ee8a.png|https://i.postimg.cc/TYTBmkcZ/imgi-18-b0681e254128607-6a7b304430755.png|https://i.postimg.cc/jdRBN8XY/imgi-19-ca9056254128607-6a7b30442fb41.png|https://i.postimg.cc/pXP380ZW/imgi-20-8886a4254128607-6a7b30442f508.png|https://i.postimg.cc/qMpWnmLp/imgi-21-75b515254128607-6a7b3044bc73b.png|https://i.postimg.cc/MKzgRsDZ/imgi-22-45dffe254128607-6a7b304539a46.png|https://i.postimg.cc/RVv2fPR0/imgi-23-28f126254128607-6a7b304596cc8.png|https://i.postimg.cc/3NTVt9Qj/imgi-6-9030c7254128607-6a7b304201cb3.png|https://i.postimg.cc/hvB62MRr/imgi-7-d6a6d8254128607-6a7b30420235e.png|https://i.postimg.cc/vTsk0Xwt/imgi-8-00ceea254128607-6a7b304277fe5.png|https://i.postimg.cc/tJNfwP9P/imgi-9-06e69a254128607-6a7b3042784a4.png">
+					<img src="https://i.postimg.cc/2yDM0TN1/CAPA.png" alt="Capa Social Media - Dra. Edirlene Dentista" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Social Media - Dra. Edirlene Dentista</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Dra. Edirlene Dentista</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Mikael iPhones" data-category="Social Media" data-gallery-key="Social Media - Mikael iPhones" data-cover="https://i.postimg.cc/N0PpyDjz/CAPA.png" data-gallery="https://i.postimg.cc/N0PpyDjz/CAPA.png|https://i.postimg.cc/s20wBm2D/imgi-10-8f7f5d254129941-6a7b358e29441.png|https://i.postimg.cc/PqF2Lyqx/imgi-11-981ca7254129941-6a7b358e29e24.png|https://i.postimg.cc/V6xggNMt/imgi-12-0db4ca254129941-6a7b358e2a356.png|https://i.postimg.cc/HxqzzLXC/imgi-13-981ce0254129941-6a7b358e9ffec.png|https://i.postimg.cc/br1TBjHF/imgi-14-52b0b2254129941-6a7b358f4d3b3.png|https://i.postimg.cc/VvXRVcBV/imgi-15-baaf21254129941-6a7b358f4dcb9.png|https://i.postimg.cc/gj3DTPHP/imgi-16-57b2fc254129941-6a7b358f4bc14.png|https://i.postimg.cc/y6RvdFCq/imgi-17-2bbbb1254129941-6a7b358f4c5ff.png|https://i.postimg.cc/L6BDk2st/imgi-18-c7e706254129941-6a7b358f4ca3a.png|https://i.postimg.cc/hPbs8cGb/imgi-19-625b6d254129941-6a7b358f4d8c0.png|https://i.postimg.cc/gkqsym0K/imgi-20-9fc5e9254129941-6a7b358f4c17b.png|https://i.postimg.cc/Kvrf7xYN/imgi-21-9f932b254129941-6a7b358f4ce70.png|https://i.postimg.cc/15cB0szC/imgi-22-ed45c8254129941-6a7b358ff0ecc.png|https://i.postimg.cc/5Nqg5btZ/imgi-23-a54d70254129941-6a7b359068654.png|https://i.postimg.cc/CxhNmXZ9/imgi-24-44bc2f254129941-6a7b359069015.png|https://i.postimg.cc/sgjcwqB8/imgi-25-a5ffbb254129941-6a7b359067f81.png|https://i.postimg.cc/RZSRXy60/imgi-26-b49f8a254129941-6a7b359068b4e.png|https://i.postimg.cc/wjqV0Zy7/imgi-27-4b0f0f254129941-6a7b3590e57e0.png|https://i.postimg.cc/d0S4760Q/imgi-8-8a1714254129941-6a7b358dadf37.png|https://i.postimg.cc/vmS31hmZ/imgi-9-1ad79b254129941-6a7b358e29934.png">
+					<img src="https://i.postimg.cc/N0PpyDjz/CAPA.png" alt="Capa Social Media - Mikael iPhones" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Social Media - Mikael iPhones</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Mikael iPhones</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 6 Segundos Novos Cards -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Paneco" data-category="Social Media" data-gallery-key="Social Media - Paneco" data-cover="https://i.ibb.co/8DXSQxgq/CAPA.png" data-gallery="https://i.ibb.co/8DXSQxgq/CAPA.png|https://i.ibb.co/Q3TGdPH5/imgi-2-eec2703a-c5b0-465b-83ab-51dc95919bc3-rw-1920.png|https://i.ibb.co/MxRvzqRH/imgi-3-610859d9-630e-4a0c-82df-a2fc8b95ee38-rw-1920.png|https://i.ibb.co/gZtw69cv/imgi-4-1b84bfb9-5158-4163-81ca-1c6c46f10835-rw-1920.png|https://i.ibb.co/zTc4hgqS/imgi-5-dc857a32-0e21-4048-a25d-a948e8417b29-rw-1920.png|https://i.ibb.co/WNmLHY55/imgi-6-b5004d2d-7b6c-47f5-b5db-1e2f8c1869a5-rw-1920.png|https://i.ibb.co/YBcRnZGD/imgi-7-0de25925-cca7-4bc0-87b4-a2eacf03eb5f-rw-1920.png|https://i.ibb.co/fGTnXVcX/imgi-8-89798a01-07bc-40b9-8b0e-2d86718d51d9-rw-1920.png|https://i.ibb.co/nqgp6VWK/imgi-9-99281710-4418-4279-83b8-f06b59456f48-rw-1920.png|https://i.ibb.co/cX81PHdg/imgi-10-a501628b-15b4-47cd-b36a-815e59bbf6b7-rw-1920.png|https://i.ibb.co/yG6jv2V/imgi-11-ed48534c-0bd0-4051-8bdb-6bf4e7e00bae-rw-1920.png|https://i.ibb.co/7d7hpRhc/imgi-12-3d5856c2-51f9-4e95-a480-7d349b03fc01-rw-1920.png|https://i.ibb.co/N6gcWb8P/imgi-13-ee0c4ba6-51aa-4a48-8c9a-8c1c0388c262-rw-1920.png|https://i.ibb.co/XZZXD8by/imgi-14-19f2900f-fb60-44c2-91e1-6089e59a99fa-rw-1920.png|https://i.ibb.co/8DfrcF3n/imgi-15-9dedffa2-6c8e-4e02-9cda-0d0c38b3b897-rw-1920.png">
+					<img src="https://i.ibb.co/8DXSQxgq/CAPA.png" alt="Capa Social Media - Paneco" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Social Media - Paneco</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Paneco</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 8. Zapz - Reparo Express -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Zapz - Reparo Express" data-category="Identidade Visual" data-gallery-key="Zapz - Reparo Express" data-cover="/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png">
+					<img src="/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png" alt="Capa Zapz - Reparo Express" fetchpriority="high" decoding="async">
+					<span hidden>Zapz - Reparo Express</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Zapz - Reparo Express</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 9. Social Media - Kameleon -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Kameleon" data-category="Social Media" data-gallery-key="Social Media - Kameleon" data-cover="/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png">
+					<img src="/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png" alt="Capa Social Media - Kameleon" fetchpriority="high" decoding="async">
+					<span hidden>Social Media - Kameleon</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Kameleon</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 10. Alex Vieira - Identidade Visual -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Alex Vieira - Identidade Visual" data-category="Identidade Visual" data-gallery-key="Alex Vieira - Identidade Visual" data-cover="/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png">
+					<img src="/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png" alt="Capa Alex Vieira - Identidade Visual" fetchpriority="high" decoding="async">
+					<span hidden>Alex Vieira - Identidade Visual</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Alex Vieira - Identidade Visual</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 11. Plaza Bank - Identidade Visual -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Plaza Bank - Identidade Visual" data-category="Identidade Visual" data-gallery-key="Plaza Bank - Identidade Visual" data-cover="/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/04.png">
+					<img src="/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/04.png" alt="Capa Plaza Bank - Identidade Visual" fetchpriority="high" decoding="async">
+					<span hidden>Plaza Bank - Identidade Visual</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Plaza Bank - Identidade Visual</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 12. Maru - Comida Japonesa -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Maru - Comida Japonesa" data-category="Identidade Visual &amp; Social Media" data-gallery-key="Maru - Comida Japonesa" data-cover="/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/06.png">
+					<img src="/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/06.png" alt="Capa Maru - Comida Japonesa" fetchpriority="high" decoding="async">
+					<span hidden>Maru - Comida Japonesa</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Maru - Comida Japonesa</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- 13. Mais um Voo & Skychat - Social Media -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Mais um Voo & Skychat - Social Media" data-category="Social Media &amp; Campanhas" data-gallery-key="Mais um Voo & Skychat - Social Media" data-cover="/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png">
+					<img src="/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png" alt="Capa Mais um Voo & Skychat - Social Media" fetchpriority="high" decoding="async">
+					<span hidden>Mais um Voo & Skychat - Social Media</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Mais um Voo & Skychat - Social Media</h3><p>Clique para ver mais</p></div>
+			</article>
+		</div>
+	</main>
+
+	<!-- Lightbox Modal -->
+	<div class="victor-lightbox" id="victor-lightbox" aria-hidden="true" role="dialog">
+		<div class="victor-lightbox__backdrop" data-lightbox-close></div>
+		<div class="victor-lightbox__panel">
+			<button class="victor-lightbox__close" type="button" aria-label="Fechar" data-lightbox-close>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+			<button class="victor-lightbox__nav victor-lightbox__nav--prev" type="button" aria-label="Arte anterior" data-lightbox-prev>
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<polyline points="15 18 9 12 15 6"></polyline>
+				</svg>
+			</button>
+			<figure class="victor-lightbox__figure">
+				<img class="victor-lightbox__image" src="" alt="" fetchpriority="high" referrerpolicy="no-referrer">
+				<figcaption class="victor-lightbox__caption"><strong></strong><span></span></figcaption>
+			</figure>
+			<button class="victor-lightbox__nav victor-lightbox__nav--next" type="button" aria-label="Proxima arte" data-lightbox-next>
+				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+					<polyline points="9 18 15 12 9 6"></polyline>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<footer class="page-footer">
+		<p>Copyright &copy; 2026 Victor Designer. Todos os direitos reservados. | <a href="index.html" target="_self">Voltar para o Início</a></p>
+	</footer>
+
+	<script>
+	(function () {
+		const manifestUrl = '/wp-content/uploads/portfolio/portfolio-manifest.json';
+		const lightbox = document.getElementById('victor-lightbox');
+		if (!lightbox) return;
+
+		const image = lightbox.querySelector('.victor-lightbox__image');
+		const title = lightbox.querySelector('.victor-lightbox__caption strong');
+		const category = lightbox.querySelector('.victor-lightbox__caption span');
+		const prev = lightbox.querySelector('[data-lightbox-prev]');
+		const next = lightbox.querySelector('[data-lightbox-next]');
+
+		let portfolioManifest = {
+			"Alex Vieira - Identidade Visual": [
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_14_40732f1e-994b-4696-8a43-46dcae459b26.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_26_1703db34-a785-4b85-ac1e-b8e030eb6bb9.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_29_4c1ef26f-b6b7-4956-b957-caf414a19444.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_31_f261c1cc-5e9f-4e2f-9bbf-405c9a46c683.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_36_8376f825-c4ae-423e-b12d-f9ebcea343b6.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_41_810dc3d0-a3e6-40d7-a32a-3aa1f1b3b19b.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_46_1d85e4f6-5db6-4438-9efe-098f2d554c0d.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_51_020c2989-8415-40bc-8623-b5257c2bfd8d.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_56_ae37f143-aba7-4513-813e-1a35855759ec.png",
+				"/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_61_4b07dd49-590d-485a-ada0-6cc9088afe14.png"
+			],
+			"Mais um Voo & Skychat - Social Media": [
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_43_e6634e229264879.686224c96891f.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_44_e482a8229264879.686224c96904e.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_45_379179229264879.686224c96746b.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_46_118241229264879.686224c967deb.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_47_617ce5229264879.686224c968268.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_57_f13a3b229264879.686224ccb81b7.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_59_4ed49e229264879.686224ccb7711.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_60_72e6c5229264879.686224ccb5ab2.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_61_3ee7b4229264879.686224ccb62c4.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_62_fc8d31229264879.686224ccb70c3.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_63_fe7e0b229264879.686224ccb7b4b.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_65_86bd72229264879.686224ccb5ed8.png",
+				"/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_66_40d3e1229264879.686224ccb66a6.png"
+			],
+			"Maru - Comida Japonesa": [
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/06.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_15_c4938ad4-a2da-48e2-9bd8-553c1815ec3d.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_26_6eacba89-36dd-4954-908d-6a84c71533ac.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_28_54b8a74e-86c0-4c13-a5e8-f428d0421f43.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_30_5a15149e-7615-4448-86fa-91545021d38d.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_32_7ba20d49-a8a1-44e9-a9f7-43a2971b1a8e.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_36_b04d7842-bed5-4fbb-ba96-828c0dd8f869.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_40_1e18dbab-2ebb-4fa8-b026-db56cf1e8036.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_44_523d8858-1a6b-4d14-b5a3-382216285d8a.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_48_c1487da6-59a2-4d04-8875-c5877612dc45.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_52_70432e0e-04ce-45f5-b5af-fb51e0232b92.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_56_2170ffb3-a120-46e4-bed6-4076a5555d6a.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_60_bfc08c21-a0b6-47e5-a05b-2120eadb1db1.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_64_f82649ad-5c62-46a5-accc-dd22e1e6ff61.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_68_a86ea7a1-9bd6-41e4-adf3-0bf984c8e7cf.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_72_c8d7ed52-dda6-42f3-bd0f-39e6f679c3f5.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_76_1f33273d-a1fe-4938-a620-3b5a28988761.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_80_d49f7e54-c394-4243-a410-be856d570760.png",
+				"/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_84_bc80adeb-7af0-4edd-a07a-b59b7a5747d9.png"
+			],
+			"Plaza Bank - Identidade Visual": [
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/04.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_23_d0d89686-b3bb-452d-b1f6-499f592bef8e.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_25_b4a91f10-e944-4e25-b902-88f4e5a0f440_rw_1920.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_28_47d1339c-cbde-4484-9cfc-a64d96e9adaa.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_33_61d4d0c9-140a-4df4-87b1-5cb35833af00_rw_1920.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_37_6f0b3fa6-beb7-4dc0-8b3e-95ab31b007b0_rw_1920.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_41_e94c6d72-b469-47e4-80dd-e4e0b8142c8a_rw_1920.png",
+				"/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_49_1c83d5a5-99b3-4346-a510-fc6747ac6b8b_rw_1920.png"
+			],
+			"Social Media - Kameleon": [
+				"/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png",
+				"/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_41_4a6399233181427.68ab065fb4194.png",
+				"/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_43_b1f561233181427.68ab06607f6bb.png",
+				"/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_45_2cd00a233181427.68ab06607ea22.png",
+				"/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_46_ad8293233181427.68ab066138afe.png",
+				"/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_47_73972c233181427.68ab066137e68.png"
+			],
+			"Zapz - Reparo Express": [
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_18_2e88d98d-9cde-41db-ae6f-8ec8ae82e5f3.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_20_c084acd8-300f-44c6-9e23-cc8baeff16e2.gif",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_25_4c69ca7b-c7c3-4a56-821a-d0cb09546490_rw_1920.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_28_437301fe-6ef8-4e12-8e09-56c0ae97d77a.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_32_694f444d-669c-4450-ab36-9ca210a9d894.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_36_5cdc0f61-3d65-4dc1-a43a-7f53a0ec5572.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_41_064244b0-bdca-4d89-b235-ab0521f6be15_rw_1920.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_45_d1e37a0d-5cba-4b3d-9279-46cbbf6557b3_rw_1920.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_49_1d7da95b-099e-45e6-bc8c-02f7ce5c1605_rw_1920.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_52_7eda4ece-0435-4397-a9aa-ee6b5e9c6d44.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_57_3ae1a1bd-6687-4857-9062-a1c2cb661abd_rw_1920.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_61_1d2e9727-845e-42f5-ad2e-dbe3ed2d8d83_rw_1920.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_64_bd2fdb30-dd4c-4091-9c35-2b21fa63d44c.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_68_33d2f99c-6f0d-42d4-81cf-a4e6b38deb34.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_76_b2f445d1-ce34-468d-a740-0de5fb3e47c2.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_80_9a16fc22-81cc-4778-bb64-aeaeba1faa0e.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_84_bea736b4-1901-4714-9bc3-1c89000ddcd7.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_88_18e64c9f-3a26-449e-aa5b-cd5dfd346213.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_92_ac420e36-9499-4aef-9bc9-a1a7d76ab3cc.png",
+				"/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_96_b9c40e1c-104c-4616-9cc8-9042373f3066.png"
+			]
+		};
+		let gallery = [];
+		let index = 0;
+		let failedAttempts = 0;
+		let currentTitle = '';
+		let currentCategory = '';
+
+		const stage = lightbox.querySelector('.victor-lightbox__figure');
+
+		function getManifestGallery(button) {
+			const key = (button.dataset.galleryKey || button.dataset.title || '').trim();
+			if (!key) return [];
+			if (portfolioManifest && Array.isArray(portfolioManifest[key]) && portfolioManifest[key].length > 0) {
+				return portfolioManifest[key];
+			}
+			const lowerKey = key.toLowerCase();
+			for (const [folderName, images] of Object.entries(portfolioManifest)) {
+				if (Array.isArray(images) && images.length > 0) {
+					if (folderName.toLowerCase() === lowerKey || folderName.toLowerCase().includes(lowerKey) || lowerKey.includes(folderName.toLowerCase())) {
+						return images;
+					}
+				}
+			}
+			return [];
+		}
+
+		function buildGallery(button) {
+			const manualGallery = (button.dataset.gallery || '').split('|').filter(Boolean);
+			if (manualGallery.length) return manualGallery;
+
+			const folderImages = getManifestGallery(button);
+			if (folderImages.length > 0) return folderImages;
+
+			const thumbSrc = button.querySelector('img')?.src;
+			if (thumbSrc && !button.querySelector('img')?.hidden) {
+				return [thumbSrc];
+			}
+
+			const cardTitle = button.dataset.title || 'Projeto';
+			const svgPlaceholder = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23020b1f"/><rect x="4" y="4" width="792" height="592" rx="12" fill="none" stroke="%23007eff" stroke-width="2" stroke-dasharray="8 8"/><text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="%2367c1ff" font-family="sans-serif" font-size="28" font-weight="bold">${encodeURIComponent(cardTitle)}</text><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="%23ffffff" font-family="sans-serif" font-size="16" opacity="0.75">Capa e Artes em breve</text></svg>`;
+			return [svgPlaceholder];
+		}
+
+		function updateCardCover(button) {
+			const manualCover = button.dataset.cover;
+			const items = getManifestGallery(button);
+			const cover = manualCover || items[0] || '';
+			const thumb = button.querySelector('img');
+			const label = button.querySelector('span');
+
+			if (!thumb || !label) return;
+
+			if (cover) {
+				if (thumb.getAttribute('src') !== cover) {
+					thumb.src = cover;
+				}
+				thumb.hidden = false;
+				label.hidden = true;
+				return;
+			}
+
+			thumb.hidden = true;
+			label.hidden = false;
+		}
+
+		function applyPortfolioCovers() {
+			document.querySelectorAll('.js-portfolio-open').forEach(updateCardCover);
+		}
+
+		applyPortfolioCovers();
+
+		function showImage(resetErrors = true) {
+			if (resetErrors) failedAttempts = 0;
+			const src = gallery[index];
+			if (!src) return;
+
+			title.textContent = currentTitle;
+			category.textContent = currentCategory;
+			image.alt = currentTitle + ' - arte ' + (index + 1);
+			prev.hidden = gallery.length < 2;
+			next.hidden = gallery.length < 2;
+
+			image.onload = () => {
+				if (stage) stage.classList.remove('is-loading');
+			};
+
+			image.onerror = () => {
+				if (stage) stage.classList.remove('is-loading');
+				if (gallery.length < 2 || failedAttempts >= gallery.length - 1) return;
+				failedAttempts += 1;
+				index = (index + 1) % gallery.length;
+				showImage(false);
+			};
+
+			image.src = src;
+
+			if (image.complete && image.naturalWidth > 0) {
+				if (stage) stage.classList.remove('is-loading');
+			} else {
+				if (stage) stage.classList.add('is-loading');
+			}
+		}
+
+		function openLightbox(button) {
+			gallery = buildGallery(button);
+			if (!gallery.length) return;
+			index = 0;
+			currentTitle = button.dataset.title || 'Portfolio';
+			currentCategory = button.dataset.category || '';
+			showImage();
+			lightbox.classList.add('is-open');
+			lightbox.setAttribute('aria-hidden', 'false');
+			document.documentElement.classList.add('victor-lightbox-open');
+		}
+
+		function closeLightbox() {
+			lightbox.classList.remove('is-open');
+			lightbox.setAttribute('aria-hidden', 'true');
+			document.documentElement.classList.remove('victor-lightbox-open');
+			image.removeAttribute('src');
+			if (stage) stage.classList.remove('is-loading');
+		}
+
+		function step(direction) {
+			if (!gallery.length) return;
+			index = (index + direction + gallery.length) % gallery.length;
+			showImage();
+		}
+
+		document.querySelectorAll('.js-portfolio-open').forEach((button) => {
+			button.addEventListener('click', () => {
+				openLightbox(button);
+			});
+		});
+
+		lightbox.querySelectorAll('[data-lightbox-close]').forEach((button) => {
+			button.addEventListener('click', closeLightbox);
+		});
+
+		prev.addEventListener('click', () => step(-1));
+		next.addEventListener('click', () => step(1));
+
+		document.addEventListener('keydown', (event) => {
+			if (!lightbox.classList.contains('is-open')) return;
+			if (event.key === 'Escape') closeLightbox();
+			if (event.key === 'ArrowLeft') step(-1);
+			if (event.key === 'ArrowRight') step(1);
+		});
+	}());
+	</script>
+</body>
+</html>

@@ -1,22 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<script>
-	(function() {
-	  try {
-	    var _f = window.fetch;
-	    var desc = Object.getOwnPropertyDescriptor(window, 'fetch') || (Object.getPrototypeOf(window) ? Object.getOwnPropertyDescriptor(Object.getPrototypeOf(window), 'fetch') : null);
-	    if (desc && desc.get && !desc.set) {
-	      Object.defineProperty(window, 'fetch', {
-	        get: function() { return _f; },
-	        set: function(v) { _f = v; },
-	        configurable: true,
-	        enumerable: true
-	      });
-	    }
-	  } catch (e) {}
-	})();
-	</script>
 	<meta charset="UTF-8">
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -25,6 +9,8 @@
 
 	<!-- This site is optimized with the Yoast SEO plugin v26.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
 	<title>Victor Designer</title>
+	<link rel="preconnect" href="https://i.postimg.cc" crossorigin />
+	<link rel="dns-prefetch" href="https://i.postimg.cc" />
 	<link rel="canonical" href="victor-design.vercel.app" />
 	<meta property="og:locale" content="pt_BR" />
 	<meta property="og:type" content="website" />
@@ -323,47 +309,106 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 				</div>
 				<div class="victor-portfolio__grid">
 					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0s;">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Zapz - Reparo Express" data-category="" data-gallery-key="zapz-reparo-express">
-							<img src="/wp-content/uploads/portfolio/zapz-reparo-express/01.webp" alt="Zapz - Reparo Express" loading="lazy" onerror="if(!this.dataset.retrySlash){this.dataset.retrySlash='1';if(this.src.startsWith('/')){this.src=this.src.substring(1);}}">
-							<span>Zapz - Reparo Express</span>
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Zapz - Reparo Express" data-category="Identidade Visual" data-gallery-key="Zapz - Reparo Express" data-cover="/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png">
+							<img src="/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png" alt="Capa Zapz - Reparo Express" fetchpriority="high" decoding="async">
+							<span hidden>Zapz - Reparo Express</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Zapz - Reparo Express</h3><p>Clique para ver mais</p></div>
 					</article>
 					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.12s;">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Kameleon" data-category="" data-gallery-key="social-media-kameleon">
-							<img src="/wp-content/uploads/portfolio/social-media-kameleon/01.webp" alt="Social Media - Kameleon" loading="lazy" onerror="if(!this.dataset.retrySlash){this.dataset.retrySlash='1';if(this.src.startsWith('/')){this.src=this.src.substring(1);}}">
-							<span>Social Media - Kameleon</span>
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Kameleon" data-category="Social Media" data-gallery-key="Social Media - Kameleon" data-cover="/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png">
+							<img src="/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png" alt="Capa Social Media - Kameleon" fetchpriority="high" decoding="async">
+							<span hidden>Social Media - Kameleon</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Social Media - Kameleon</h3><p>Clique para ver mais</p></div>
 					</article>
 					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.24s;">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Alex Vieira - Identidade Visual" data-category="" data-gallery-key="alex-vieira">
-							<img src="/wp-content/uploads/portfolio/alex-vieira/01.webp" alt="Alex Vieira - Identidade Visual" loading="lazy" onerror="if(!this.dataset.retrySlash){this.dataset.retrySlash='1';if(this.src.startsWith('/')){this.src=this.src.substring(1);}}">
-							<span>Alex Vieira - Identidade Visual</span>
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Alex Vieira - Identidade Visual" data-category="Identidade Visual" data-gallery-key="Alex Vieira - Identidade Visual" data-cover="/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png">
+							<img src="/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png" alt="Capa Alex Vieira - Identidade Visual" fetchpriority="high" decoding="async">
+							<span hidden>Alex Vieira - Identidade Visual</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Alex Vieira - Identidade Visual</h3><p>Clique para ver mais</p></div>
 					</article>
 					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.08s;">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Corretora de Imóveis" data-category="" data-gallery-key="social-media-corretora">
-							<img src="/wp-content/uploads/portfolio/social-media-corretora/01.webp" alt="Social Media - Corretora de Imóveis" loading="lazy" onerror="if(!this.dataset.retrySlash){this.dataset.retrySlash='1';if(this.src.startsWith('/')){this.src=this.src.substring(1);}}">
-							<span>Social Media - Corretora de Imóveis</span>
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Plaza Bank - Identidade Visual" data-category="Identidade Visual" data-gallery-key="Plaza Bank - Identidade Visual" data-cover="/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/04.png">
+							<img src="/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/04.png" alt="Capa Plaza Bank - Identidade Visual" fetchpriority="high" decoding="async">
+							<span hidden>Plaza Bank - Identidade Visual</span>
 						</button>
-						<div class="victor-portfolio__content"><h3>Social Media - Corretora de Imóveis</h3><p>Clique para ver mais</p></div>
+						<div class="victor-portfolio__content"><h3>Plaza Bank - Identidade Visual</h3><p>Clique para ver mais</p></div>
 					</article>
 					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.2s;">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Branding - Stadler Grellmann Advogados" data-category="" data-gallery-key="branding-advogados">
-							<img src="/wp-content/uploads/portfolio/branding-advogados/01.webp" alt="Branding - Stadler Grellmann Advogados" loading="lazy" onerror="if(!this.dataset.retrySlash){this.dataset.retrySlash='1';if(this.src.startsWith('/')){this.src=this.src.substring(1);}}">
-							<span>Branding - Stadler Grellmann Advogados</span>
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Maru - Comida Japonesa" data-category="Identidade Visual &amp; Social Media" data-gallery-key="Maru - Comida Japonesa" data-cover="/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/06.png">
+							<img src="/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/06.png" alt="Capa Maru - Comida Japonesa" fetchpriority="high" decoding="async">
+							<span hidden>Maru - Comida Japonesa</span>
 						</button>
-						<div class="victor-portfolio__content"><h3>Branding - Stadler Grellmann Advogados</h3><p>Clique para ver mais</p></div>
+						<div class="victor-portfolio__content"><h3>Maru - Comida Japonesa</h3><p>Clique para ver mais</p></div>
 					</article>
 					<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.32s;">
-						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Mais um Voo & Skychat - Social Media" data-category="" data-gallery-key="mais-um-voo-skychat">
-							<img src="/wp-content/uploads/portfolio/mais-um-voo-skychat/01.webp" alt="Mais um Voo & Skychat - Social Media" loading="lazy" onerror="if(!this.dataset.retrySlash){this.dataset.retrySlash='1';if(this.src.startsWith('/')){this.src=this.src.substring(1);}}">
-							<span>Mais um Voo & Skychat - Social Media</span>
+						<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Mais um Voo & Skychat - Social Media" data-category="Social Media &amp; Campanhas" data-gallery-key="Mais um Voo & Skychat - Social Media" data-cover="/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png">
+							<img src="/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png" alt="Capa Mais um Voo & Skychat - Social Media" fetchpriority="high" decoding="async">
+							<span hidden>Mais um Voo & Skychat - Social Media</span>
 						</button>
 						<div class="victor-portfolio__content"><h3>Mais um Voo & Skychat - Social Media</h3><p>Clique para ver mais</p></div>
 					</article>
+				</div>
+				<div class="victor-portfolio__actions">
+					<a class="victor-portfolio__btn-ver-todos" id="btn-ver-todos" href="todos-os-projetos.html" target="_self">
+						<span class="btn-text">VER TODOS</span>
+						<svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="5" y1="12" x2="19" y2="12"></line>
+							<polyline points="12 5 19 12 12 19"></polyline>
+						</svg>
+					</a>
+				</div>
+				<div class="victor-portfolio__extra-tab" id="portfolio-extra-grid" aria-hidden="true">
+					<div class="victor-portfolio__extra-header">
+						<span class="victor-portfolio__tab-badge">MAIS TRABALHOS</span>
+						<h3 class="victor-portfolio__tab-title">Galeria Expandida</h3>
+					</div>
+					<div class="victor-portfolio__grid">
+						<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0s;">
+							<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Novo Projeto 01" data-category="" data-gallery-key="Novo Projeto 01">
+								<img alt="Capa do Novo Projeto 01" loading="lazy" hidden>
+								<span>Novo Projeto 01</span>
+							</button>
+							<div class="victor-portfolio__content"><h3>Novo Projeto 01</h3><p>Clique para ver mais</p></div>
+						</article>
+						<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.12s;">
+							<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Novo Projeto 02" data-category="" data-gallery-key="Novo Projeto 02">
+								<img alt="Capa do Novo Projeto 02" loading="lazy" hidden>
+								<span>Novo Projeto 02</span>
+							</button>
+							<div class="victor-portfolio__content"><h3>Novo Projeto 02</h3><p>Clique para ver mais</p></div>
+						</article>
+						<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.24s;">
+							<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Novo Projeto 03" data-category="" data-gallery-key="Novo Projeto 03">
+								<img alt="Capa do Novo Projeto 03" loading="lazy" hidden>
+								<span>Novo Projeto 03</span>
+							</button>
+							<div class="victor-portfolio__content"><h3>Novo Projeto 03</h3><p>Clique para ver mais</p></div>
+						</article>
+						<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.08s;">
+							<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Novo Projeto 04" data-category="" data-gallery-key="Novo Projeto 04">
+								<img alt="Capa do Novo Projeto 04" loading="lazy" hidden>
+								<span>Novo Projeto 04</span>
+							</button>
+							<div class="victor-portfolio__content"><h3>Novo Projeto 04</h3><p>Clique para ver mais</p></div>
+						</article>
+						<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.2s;">
+							<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Novo Projeto 05" data-category="" data-gallery-key="Novo Projeto 05">
+								<img alt="Capa do Novo Projeto 05" loading="lazy" hidden>
+								<span>Novo Projeto 05</span>
+							</button>
+							<div class="victor-portfolio__content"><h3>Novo Projeto 05</h3><p>Clique para ver mais</p></div>
+						</article>
+						<article class="victor-portfolio__card hover-scale scroll-bottom" style="transition-delay: 0.32s;">
+							<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Novo Projeto 06" data-category="" data-gallery-key="Novo Projeto 06">
+								<img alt="Capa do Novo Projeto 06" loading="lazy" hidden>
+								<span>Novo Projeto 06</span>
+							</button>
+							<div class="victor-portfolio__content"><h3>Novo Projeto 06</h3><p>Clique para ver mais</p></div>
+						</article>
+					</div>
 				</div>
 			</div>
 		</section>		<div  class="elementor-element elementor-element-71c1b49 e-flex e-con-boxed e-con e-parent" data-id="71c1b49" data-element_type="container" data-e-type="container">
@@ -525,6 +570,7 @@ window.addEventListener("scroll", fadeScroll);
     transition: 1s;
     filter: blur(0px);
     transform: translate(0, 0px) scale(1);
+    transition-delay: 0s !important;
 }
 </style>				</div>
 				</div>
@@ -655,17 +701,24 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
 			<div class="victor-lightbox__backdrop" data-lightbox-close></div>
 			<div class="victor-lightbox__panel">
 				<button class="victor-lightbox__close" type="button" aria-label="Fechar" data-lightbox-close>
-					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<line x1="18" y1="6" x2="6" y2="18"></line>
+						<line x1="6" y1="6" x2="18" y2="18"></line>
+					</svg>
 				</button>
 				<button class="victor-lightbox__nav victor-lightbox__nav--prev" type="button" aria-label="Arte anterior" data-lightbox-prev>
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="15 18 9 12 15 6"></polyline>
+					</svg>
 				</button>
 				<figure class="victor-lightbox__figure">
-					<img class="victor-lightbox__image" src="" alt="">
+					<img class="victor-lightbox__image" src="" alt="" fetchpriority="high" referrerpolicy="no-referrer">
 					<figcaption class="victor-lightbox__caption"><strong></strong><span></span></figcaption>
 				</figure>
 				<button class="victor-lightbox__nav victor-lightbox__nav--next" type="button" aria-label="Proxima arte" data-lightbox-next>
-					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+					<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="9 18 15 12 9 6"></polyline>
+					</svg>
 				</button>
 			</div>
 		</div>
@@ -709,133 +762,115 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
   const category = lightbox.querySelector('.victor-lightbox__caption span');
   const prev = lightbox.querySelector('[data-lightbox-prev]');
   const next = lightbox.querySelector('[data-lightbox-next]');
-  const DEFAULT_MANIFEST = {
-    "alex-vieira": [
-      "/wp-content/uploads/portfolio/alex-vieira/01.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/02.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/03.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/04.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/05.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/06.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/07.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/08.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/09.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/10.webp",
-      "/wp-content/uploads/portfolio/alex-vieira/11.webp"
+  let portfolioManifest = {
+    "Alex Vieira - Identidade Visual": [
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/03.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_14_40732f1e-994b-4696-8a43-46dcae459b26.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_26_1703db34-a785-4b85-ac1e-b8e030eb6bb9.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_29_4c1ef26f-b6b7-4956-b957-caf414a19444.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_31_f261c1cc-5e9f-4e2f-9bbf-405c9a46c683.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_36_8376f825-c4ae-423e-b12d-f9ebcea343b6.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_41_810dc3d0-a3e6-40d7-a32a-3aa1f1b3b19b.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_46_1d85e4f6-5db6-4438-9efe-098f2d554c0d.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_51_020c2989-8415-40bc-8623-b5257c2bfd8d.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_56_ae37f143-aba7-4513-813e-1a35855759ec.png",
+      "/wp-content/uploads/portfolio/Alex%20Vieira%20-%20Identidade%20Visual/imgi_61_4b07dd49-590d-485a-ada0-6cc9088afe14.png"
     ],
-    "branding-advogados": [
-      "/wp-content/uploads/portfolio/branding-advogados/01.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/02.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/03.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/04.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/05.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/06.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/07.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/08.webp",
-      "/wp-content/uploads/portfolio/branding-advogados/09.webp"
+    "Mais um Voo & Skychat - Social Media": [
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/01.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_43_e6634e229264879.686224c96891f.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_44_e482a8229264879.686224c96904e.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_45_379179229264879.686224c96746b.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_46_118241229264879.686224c967deb.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_47_617ce5229264879.686224c968268.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_57_f13a3b229264879.686224ccb81b7.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_59_4ed49e229264879.686224ccb7711.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_60_72e6c5229264879.686224ccb5ab2.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_61_3ee7b4229264879.686224ccb62c4.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_62_fc8d31229264879.686224ccb70c3.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_63_fe7e0b229264879.686224ccb7b4b.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_65_86bd72229264879.686224ccb5ed8.png",
+      "/wp-content/uploads/portfolio/Mais%20um%20Voo%20%26%20Skychat%20-%20Social%20Media/imgi_66_40d3e1229264879.686224ccb66a6.png"
     ],
-    "mais-um-voo-skychat": [
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/01.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/02.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/03.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/04.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/05.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/06.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/07.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/08.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/09.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/10.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/11.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/12.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/13.webp",
-      "/wp-content/uploads/portfolio/mais-um-voo-skychat/14.webp"
+    "Maru - Comida Japonesa": [
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/06.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_15_c4938ad4-a2da-48e2-9bd8-553c1815ec3d.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_26_6eacba89-36dd-4954-908d-6a84c71533ac.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_28_54b8a74e-86c0-4c13-a5e8-f428d0421f43.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_30_5a15149e-7615-4448-86fa-91545021d38d.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_32_7ba20d49-a8a1-44e9-a9f7-43a2971b1a8e.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_36_b04d7842-bed5-4fbb-ba96-828c0dd8f869.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_40_1e18dbab-2ebb-4fa8-b026-db56cf1e8036.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_44_523d8858-1a6b-4d14-b5a3-382216285d8a.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_48_c1487da6-59a2-4d04-8875-c5877612dc45.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_52_70432e0e-04ce-45f5-b5af-fb51e0232b92.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_56_2170ffb3-a120-46e4-bed6-4076a5555d6a.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_60_bfc08c21-a0b6-47e5-a05b-2120eadb1db1.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_64_f82649ad-5c62-46a5-accc-dd22e1e6ff61.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_68_a86ea7a1-9bd6-41e4-adf3-0bf984c8e7cf.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_72_c8d7ed52-dda6-42f3-bd0f-39e6f679c3f5.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_76_1f33273d-a1fe-4938-a620-3b5a28988761.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_80_d49f7e54-c394-4243-a410-be856d570760.png",
+      "/wp-content/uploads/portfolio/Maru%20-%20Comida%20Japonesa/imgi_84_bc80adeb-7af0-4edd-a07a-b59b7a5747d9.png"
     ],
-    "social-media-corretora": [
-      "/wp-content/uploads/portfolio/social-media-corretora/01.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/02.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/03.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/04.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/05.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/06.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/07.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/08.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/09.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/10.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/11.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/12.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/13.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/14.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/15.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/16.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/17.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/18.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/19.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/20.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/21.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/22.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/23.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/24.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/25.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/26.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/27.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/28.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/29.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/30.webp",
-      "/wp-content/uploads/portfolio/social-media-corretora/31.webp"
+    "Plaza Bank - Identidade Visual": [
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/04.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_23_d0d89686-b3bb-452d-b1f6-499f592bef8e.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_25_b4a91f10-e944-4e25-b902-88f4e5a0f440_rw_1920.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_28_47d1339c-cbde-4484-9cfc-a64d96e9adaa.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_33_61d4d0c9-140a-4df4-87b1-5cb35833af00_rw_1920.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_37_6f0b3fa6-beb7-4dc0-8b3e-95ab31b007b0_rw_1920.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_41_e94c6d72-b469-47e4-80dd-e4e0b8142c8a_rw_1920.png",
+      "/wp-content/uploads/portfolio/Plaza%20Bank%20-%20Identidade%20Visual/imgi_49_1c83d5a5-99b3-4346-a510-fc6747ac6b8b_rw_1920.png"
     ],
-    "social-media-kameleon": [
-      "/wp-content/uploads/portfolio/social-media-kameleon/01.webp",
-      "/wp-content/uploads/portfolio/social-media-kameleon/02.webp",
-      "/wp-content/uploads/portfolio/social-media-kameleon/03.webp",
-      "/wp-content/uploads/portfolio/social-media-kameleon/04.webp",
-      "/wp-content/uploads/portfolio/social-media-kameleon/05.webp",
-      "/wp-content/uploads/portfolio/social-media-kameleon/06.webp"
+    "Social Media - Kameleon": [
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/05.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_41_4a6399233181427.68ab065fb4194.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_43_b1f561233181427.68ab06607f6bb.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_45_2cd00a233181427.68ab06607ea22.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_46_ad8293233181427.68ab066138afe.png",
+      "/wp-content/uploads/portfolio/Social%20Media%20-%20Kameleon/imgi_47_73972c233181427.68ab066137e68.png"
     ],
-    "zapz-reparo-express": [
-      "/wp-content/uploads/portfolio/zapz-reparo-express/01.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/02.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/03.gif",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/04.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/05.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/06.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/07.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/08.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/09.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/10.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/11.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/12.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/13.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/14.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/15.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/16.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/17.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/18.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/19.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/20.webp",
-      "/wp-content/uploads/portfolio/zapz-reparo-express/21.webp"
+    "Zapz - Reparo Express": [
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/02.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_18_2e88d98d-9cde-41db-ae6f-8ec8ae82e5f3.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_20_c084acd8-300f-44c6-9e23-cc8baeff16e2.gif",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_25_4c69ca7b-c7c3-4a56-821a-d0cb09546490_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_28_437301fe-6ef8-4e12-8e09-56c0ae97d77a.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_32_694f444d-669c-4450-ab36-9ca210a9d894.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_36_5cdc0f61-3d65-4dc1-a43a-7f53a0ec5572.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_41_064244b0-bdca-4d89-b235-ab0521f6be15_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_45_d1e37a0d-5cba-4b3d-9279-46cbbf6557b3_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_49_1d7da95b-099e-45e6-bc8c-02f7ce5c1605_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_52_7eda4ece-0435-4397-a9aa-ee6b5e9c6d44.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_57_3ae1a1bd-6687-4857-9062-a1c2cb661abd_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_61_1d2e9727-845e-42f5-ad2e-dbe3ed2d8d83_rw_1920.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_64_bd2fdb30-dd4c-4091-9c35-2b21fa63d44c.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_68_33d2f99c-6f0d-42d4-81cf-a4e6b38deb34.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_76_b2f445d1-ce34-468d-a740-0de5fb3e47c2.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_80_9a16fc22-81cc-4778-bb64-aeaeba1faa0e.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_84_bea736b4-1901-4714-9bc3-1c89000ddcd7.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_88_18e64c9f-3a26-449e-aa5b-cd5dfd346213.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_92_ac420e36-9499-4aef-9bc9-a1a7d76ab3cc.png",
+      "/wp-content/uploads/portfolio/Zapz%20-%20Reparo%20Express/imgi_96_b9c40e1c-104c-4616-9cc8-9042373f3066.png"
     ]
   };
-
-  let portfolioManifest = DEFAULT_MANIFEST;
   let gallery = [];
   let index = 0;
   let failedAttempts = 0;
-
-  function normalizeStr(str) {
-    return (str || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
-  }
+  let currentTitle = '';
+  let currentCategory = '';
 
   function getManifestGallery(button) {
     const key = (button.dataset.galleryKey || '').trim();
-    if (key && Array.isArray(portfolioManifest[key]) && portfolioManifest[key].length > 0) {
+    if (!key) return [];
+    if (Array.isArray(portfolioManifest[key]) && portfolioManifest[key].length > 0) {
       return portfolioManifest[key];
     }
-    const title = (button.dataset.title || '').trim();
-    const normKey = normalizeStr(key || title);
+    const lowerKey = key.toLowerCase();
     for (const [folderName, images] of Object.entries(portfolioManifest)) {
       if (Array.isArray(images) && images.length > 0) {
-        const normFolder = normalizeStr(folderName);
-        if (normFolder === normKey || normFolder.replace(/-/g, '').includes(normKey.replace(/[^a-z0-9]/g, '')) || normKey.replace(/[^a-z0-9]/g, '').includes(normFolder.replace(/-/g, ''))) {
+        if (folderName.toLowerCase() === lowerKey || folderName.toLowerCase().includes(lowerKey) || lowerKey.includes(folderName.toLowerCase())) {
           return images;
         }
       }
@@ -848,49 +883,40 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
     if (manualGallery.length) return manualGallery;
 
     const folderImages = getManifestGallery(button);
-    if (folderImages.length > 1) {
-      return folderImages.slice(1);
+    if (folderImages.length > 0) return folderImages;
+
+    const thumbSrc = button.querySelector('img')?.src;
+    if (thumbSrc && !button.querySelector('img')?.hidden) {
+      return [thumbSrc];
     }
-    return folderImages;
+
+    const cardTitle = button.dataset.title || 'Projeto';
+    const svgPlaceholder = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23020b1f"/><rect x="4" y="4" width="792" height="592" rx="12" fill="none" stroke="%23007eff" stroke-width="2" stroke-dasharray="8 8"/><text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="%2367c1ff" font-family="sans-serif" font-size="28" font-weight="bold">${encodeURIComponent(cardTitle)}</text><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="%23ffffff" font-family="sans-serif" font-size="16" opacity="0.75">Capa e Artes em breve</text></svg>`;
+    return [svgPlaceholder];
   }
 
+  const stage = lightbox ? lightbox.querySelector('.victor-lightbox__figure') : null;
+
   function updateCardCover(button) {
+    const manualCover = button.dataset.cover;
     const items = getManifestGallery(button);
-    const cover = items[0] || '';
+    const cover = manualCover || items[0] || '';
     const thumb = button.querySelector('img');
     const label = button.querySelector('span');
 
     if (!thumb || !label) return;
 
     if (cover) {
-      thumb.onerror = function () {
-        if (!this.dataset.fallbackSlash) {
-          this.dataset.fallbackSlash = '1';
-          const current = this.getAttribute('src') || cover;
-          if (current.startsWith('/')) {
-            this.src = current.substring(1);
-            return;
-          }
-        }
-        this.hidden = true;
-        this.style.display = 'none';
-        label.hidden = false;
-        label.style.display = 'flex';
-      };
       if (thumb.getAttribute('src') !== cover) {
         thumb.src = cover;
       }
       thumb.hidden = false;
-      thumb.style.display = 'block';
       label.hidden = true;
-      label.style.display = 'none';
       return;
     }
 
     thumb.hidden = true;
-    thumb.style.display = 'none';
     label.hidden = false;
-    label.style.display = 'flex';
   }
 
   function applyPortfolioCovers() {
@@ -899,31 +925,55 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
 
   applyPortfolioCovers();
 
-  const manifestReady = fetch(manifestUrl, { cache: 'no-store' })
-    .then((response) => response.ok ? response.json() : null)
+  const manifestReady = fetch(manifestUrl)
+    .then((response) => response.ok ? response.json() : {})
     .then((manifest) => {
-      if (manifest && Object.keys(manifest).length > 0) {
-        portfolioManifest = manifest;
-        applyPortfolioCovers();
-      }
+      portfolioManifest = manifest || {};
+      applyPortfolioCovers();
     })
-    .catch(() => {});
+    .catch(() => {
+      portfolioManifest = {};
+      applyPortfolioCovers();
+    });
 
   function showImage(resetErrors = true) {
     if (resetErrors) failedAttempts = 0;
     const src = gallery[index];
-    image.src = src;
-    image.alt = title.textContent + ' - arte ' + (index + 1);
+    if (!src) return;
+
+    title.textContent = currentTitle;
+    category.textContent = currentCategory;
+    image.alt = currentTitle + ' - arte ' + (index + 1);
     prev.hidden = gallery.length < 2;
     next.hidden = gallery.length < 2;
+
+    image.onload = () => {
+      if (stage) stage.classList.remove('is-loading');
+    };
+
+    image.onerror = () => {
+      if (stage) stage.classList.remove('is-loading');
+      if (gallery.length < 2 || failedAttempts >= gallery.length - 1) return;
+      failedAttempts += 1;
+      index = (index + 1) % gallery.length;
+      showImage(false);
+    };
+
+    image.src = src;
+
+    if (image.complete && image.naturalWidth > 0) {
+      if (stage) stage.classList.remove('is-loading');
+    } else {
+      if (stage) stage.classList.add('is-loading');
+    }
   }
 
   function openLightbox(button) {
     gallery = buildGallery(button);
     if (!gallery.length) return;
     index = 0;
-    title.textContent = button.dataset.title || 'Portfolio';
-    category.textContent = button.dataset.category || '';
+    currentTitle = button.dataset.title || 'Portfolio';
+    currentCategory = button.dataset.category || '';
     showImage();
     lightbox.classList.add('is-open');
     lightbox.setAttribute('aria-hidden', 'false');
@@ -935,6 +985,7 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
     lightbox.setAttribute('aria-hidden', 'true');
     document.documentElement.classList.remove('victor-lightbox-open');
     image.removeAttribute('src');
+    if (stage) stage.classList.remove('is-loading');
   }
 
   function step(direction) {
@@ -943,28 +994,13 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
     showImage();
   }
 
-  image.addEventListener('error', () => {
-    if (!image.dataset.retrySlash && image.src) {
-      image.dataset.retrySlash = '1';
-      const cur = gallery[index];
-      if (cur && cur.startsWith('/')) {
-        image.src = cur.substring(1);
-        return;
-      }
-    }
-    delete image.dataset.retrySlash;
-    if (gallery.length < 2 || failedAttempts >= gallery.length - 1) return;
-    failedAttempts += 1;
-    index = (index + 1) % gallery.length;
-    showImage(false);
-  });
-
   document.querySelectorAll('.js-portfolio-open').forEach((button) => {
-    button.addEventListener('click', async () => {
-      await manifestReady;
+    button.addEventListener('click', () => {
       openLightbox(button);
     });
   });
+
+  /* Navegação do botão VER TODOS direciona diretamente para a nova página interna todos-os-projetos.html */
 
   lightbox.querySelectorAll('[data-lightbox-close]').forEach((button) => {
     button.addEventListener('click', closeLightbox);
