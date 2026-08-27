@@ -879,11 +879,24 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
   }
 
   function buildGallery(button) {
+    const cover = (button.dataset.cover || '').trim();
+    let list = [];
     const manualGallery = (button.dataset.gallery || '').split('|').filter(Boolean);
-    if (manualGallery.length) return manualGallery;
+    if (manualGallery.length) {
+      list = manualGallery;
+    } else {
+      const folderImages = getManifestGallery(button);
+      if (folderImages.length > 0) {
+        list = folderImages;
+      }
+    }
 
-    const folderImages = getManifestGallery(button);
-    if (folderImages.length > 0) return folderImages;
+    if (list.length > 1 && cover) {
+      const filtered = list.filter(item => item !== cover);
+      if (filtered.length > 0) list = filtered;
+    }
+
+    if (list.length > 0) return list;
 
     const thumbSrc = button.querySelector('img')?.src;
     if (thumbSrc && !button.querySelector('img')?.hidden) {
@@ -891,7 +904,7 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
     }
 
     const cardTitle = button.dataset.title || 'Projeto';
-    const svgPlaceholder = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23020b1f"/><rect x="4" y="4" width="792" height="592" rx="12" fill="none" stroke="%23007eff" stroke-width="2" stroke-dasharray="8 8"/><text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="%2367c1ff" font-family="sans-serif" font-size="28" font-weight="bold">${encodeURIComponent(cardTitle)}</text><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="%23ffffff" font-family="sans-serif" font-size="16" opacity="0.75">Capa e Artes em breve</text></svg>`;
+    const svgPlaceholder = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="%23020b1f"/><rect x="4" y="4" width="792" height="592" rx="12" fill="none" stroke="%23007eff" stroke-width="2" stroke-dasharray="8 8"/><text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" fill="%2367c1ff" font-family="sans-serif" font-size="28" font-weight="bold">${encodeURIComponent(cardTitle)}</text><text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" fill="%23ffffff" font-family="sans-serif" font-size="16" opacity="0.75">Artes em breve</text></svg>`;
     return [svgPlaceholder];
   }
 
