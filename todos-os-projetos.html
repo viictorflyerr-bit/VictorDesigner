@@ -2,6 +2,22 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		(function() {
+			try {
+				var _f = window.fetch;
+				if (_f) {
+					var currentFetch = _f;
+					Object.defineProperty(window, 'fetch', {
+						get: function() { return currentFetch; },
+						set: function(fn) { currentFetch = fn; },
+						configurable: true,
+						enumerable: true
+					});
+				}
+			} catch (e) {}
+		})();
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
@@ -201,27 +217,6 @@
 			}
 		}
 
-		.victor-lightbox__video-link {
-			display: inline-flex;
-			align-items: center;
-			gap: 6px;
-			padding: 6px 14px;
-			background: rgba(0, 126, 255, 0.2);
-			border: 1px solid rgba(0, 126, 255, 0.5);
-			border-radius: 999px;
-			color: #67c1ff;
-			font-size: 13px;
-			text-decoration: none;
-			transition: all 0.2s ease;
-			margin-top: 8px;
-		}
-
-		.victor-lightbox__video-link:hover {
-			background: rgba(0, 126, 255, 0.4);
-			color: #ffffff;
-			border-color: #67c1ff;
-		}
-
 		.page-footer {
 			background: rgba(1, 7, 20, 0.95);
 			border-top: 1px solid rgba(0, 126, 255, 0.15);
@@ -318,13 +313,13 @@
 				<div class="victor-portfolio__content"><h3>Social Media - Mikael iPhones</h3><p>Clique para ver mais</p></div>
 			</article>
 
-			<!-- 6 Segundos Novos Cards -->
+			<!-- 7. Social Media - Paneco (Capas Single Spotify) -->
 			<article class="victor-portfolio__card hover-scale">
-				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Paneco" data-category="Social Media" data-gallery-key="Social Media - Paneco" data-cover="https://i.ibb.co/8DXSQxgq/CAPA.png" data-gallery="https://i.ibb.co/Q3TGdPH5/imgi-2-eec2703a-c5b0-465b-83ab-51dc95919bc3-rw-1920.png|https://i.ibb.co/MxRvzqRH/imgi-3-610859d9-630e-4a0c-82df-a2fc8b95ee38-rw-1920.png|https://i.ibb.co/gZtw69cv/imgi-4-1b84bfb9-5158-4163-81ca-1c6c46f10835-rw-1920.png|https://i.ibb.co/zTc4hgqS/imgi-5-dc857a32-0e21-4048-a25d-a948e8417b29-rw-1920.png|https://i.ibb.co/WNmLHY55/imgi-6-b5004d2d-7b6c-47f5-b5db-1e2f8c1869a5-rw-1920.png|https://i.ibb.co/YBcRnZGD/imgi-7-0de25925-cca7-4bc0-87b4-a2eacf03eb5f-rw-1920.png|https://i.ibb.co/fGTnXVcX/imgi-8-89798a01-07bc-40b9-8b0e-2d86718d51d9-rw-1920.png|https://i.ibb.co/nqgp6VWK/imgi-9-99281710-4418-4279-83b8-f06b59456f48-rw-1920.png|https://i.ibb.co/cX81PHdg/imgi-10-a501628b-15b4-47cd-b36a-815e59bbf6b7-rw-1920.png|https://i.ibb.co/yG6jv2V/imgi-11-ed48534c-0bd0-4051-8bdb-6bf4e7e00bae-rw-1920.png|https://i.ibb.co/7d7hpRhc/imgi-12-3d5856c2-51f9-4e95-a480-7d349b03fc01-rw-1920.png|https://i.ibb.co/N6gcWb8P/imgi-13-ee0c4ba6-51aa-4a48-8c9a-8c1c0388c262-rw-1920.png|https://i.ibb.co/XZZXD8by/imgi-14-19f2900f-fb60-44c2-91e1-6089e59a99fa-rw-1920.png|https://i.ibb.co/8DfrcF3n/imgi-15-9dedffa2-6c8e-4e02-9cda-0d0c38b3b897-rw-1920.png">
-					<img src="https://i.ibb.co/8DXSQxgq/CAPA.png" alt="Capa Social Media - Paneco" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
-					<span hidden>Social Media - Paneco</span>
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Capas Single Spotify" data-category="Social Media" data-gallery-key="Capas Single Spotify" data-cover="https://i.postimg.cc/6Qb8WcZn/01.png" data-gallery="https://i.postimg.cc/9MQ6cthP/CAPA-ELA-PERDE-A-VERGONHA.jpg|https://i.postimg.cc/Y04TWrjY/CAPA-NAO-SE-FAZ-DE-SANTA.jpg|https://i.postimg.cc/wMtnmq3F/CAPA-PARAISO-DE-PIRANHA.jpg|https://i.postimg.cc/4yKj9fnF/CAPA-PULA-EM-MIM-PERERECA.jpg|https://i.postimg.cc/6q7FvWTG/CAPA-BEAT-WINDOWS.jpg">
+					<img src="https://i.postimg.cc/6Qb8WcZn/01.png" alt="Capa Capas Single Spotify" fetchpriority="high" decoding="async" referrerpolicy="no-referrer">
+					<span hidden>Capas Single Spotify</span>
 				</button>
-				<div class="victor-portfolio__content"><h3>Social Media - Paneco</h3><p>Clique para ver mais</p></div>
+				<div class="victor-portfolio__content"><h3>Capas Single Spotify</h3><p>Clique para ver mais</p></div>
 			</article>
 
 			<!-- 8. Social Media - Corretora de Imóveis -->
@@ -370,14 +365,6 @@
 						<strong></strong>
 						<span></span>
 					</div>
-					<a class="victor-lightbox__video-link" href="#" target="_blank" rel="noopener noreferrer" hidden>
-						<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-							<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-							<polyline points="15 3 21 3 21 9"></polyline>
-							<line x1="10" y1="14" x2="21" y2="3"></line>
-						</svg>
-						Assistir no Vimeo
-					</a>
 				</figcaption>
 			</figure>
 			<button class="victor-lightbox__nav victor-lightbox__nav--next" type="button" aria-label="Proxima arte" data-lightbox-next>
@@ -400,7 +387,6 @@
 
 		const image = lightbox.querySelector('.victor-lightbox__image');
 		const videoIframe = lightbox.querySelector('.victor-lightbox__video');
-		const videoLink = lightbox.querySelector('.victor-lightbox__video-link');
 		const title = lightbox.querySelector('.victor-lightbox__caption strong');
 		const category = lightbox.querySelector('.victor-lightbox__caption span');
 		const prev = lightbox.querySelector('[data-lightbox-prev]');
@@ -512,10 +498,6 @@
 					vimeoId = idMatch[1] || idMatch[2];
 					embedUrl = `https://player.vimeo.com/video/${vimeoId}?autoplay=1&title=0&byline=0&portrait=0`;
 				}
-				if (videoLink) {
-					videoLink.href = vimeoId ? `https://vimeo.com/${vimeoId}` : src;
-					videoLink.hidden = false;
-				}
 				if (image) {
 					image.hidden = true;
 					image.removeAttribute('src');
@@ -526,11 +508,6 @@
 				}
 				if (stage) stage.classList.remove('is-loading');
 				return;
-			}
-
-			if (videoLink) {
-				videoLink.hidden = true;
-				videoLink.removeAttribute('href');
 			}
 
 			if (videoIframe) {
@@ -584,10 +561,6 @@
 			if (videoIframe) {
 				videoIframe.removeAttribute('src');
 				videoIframe.hidden = true;
-			}
-			if (videoLink) {
-				videoLink.hidden = true;
-				videoLink.removeAttribute('href');
 			}
 			if (stage) stage.classList.remove('is-loading');
 		}

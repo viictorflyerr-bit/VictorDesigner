@@ -2,6 +2,22 @@
 <html lang="pt-BR">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		(function() {
+			try {
+				var _f = window.fetch;
+				if (_f) {
+					var currentFetch = _f;
+					Object.defineProperty(window, 'fetch', {
+						get: function() { return currentFetch; },
+						set: function(fn) { currentFetch = fn; },
+						configurable: true,
+						enumerable: true
+					});
+				}
+			} catch (e) {}
+		})();
+	</script>
 	<link rel="icon" type="image/png" href="/favicon.png" />
 	<link rel="shortcut icon" type="image/png" href="/favicon.png" />
 	<link rel="apple-touch-icon" href="/favicon.png" />
@@ -653,23 +669,7 @@ html, body {
 				</div>
 				<div class="elementor-element elementor-element-0b49c7b elementor-widget elementor-widget-html" data-id="0b49c7b" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-					<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '925379578996809');
-fbq('track', 'PageView');
-</script>
-<noscript><img loading="lazy" height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=925379578996809&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->				</div>
+				</div>
 				</div>
 					</div>
 				</div>
