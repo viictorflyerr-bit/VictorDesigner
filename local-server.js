@@ -70,6 +70,46 @@ function buildPortfolioManifest() {
     }, {});
 }
 
+function resolveStaticFile(targetPath) {
+  if (fs.existsSync(targetPath) && fs.statSync(targetPath).isFile()) {
+    return targetPath;
+  }
+
+  const dir = path.dirname(targetPath);
+  const ext = path.extname(targetPath);
+  const base = path.basename(targetPath, ext);
+
+  const candidates = [];
+
+  // 1. -1 variation
+  if (base.endsWith("-1")) {
+    candidates.push(path.join(dir, base.slice(0, -2) + ext));
+  } else {
+    candidates.push(path.join(dir, base + "-1" + ext));
+  }
+
+  // 2. alternative media extensions
+  const exts = [".webp", ".jpg", ".jpeg", ".png", ".webm", ".mp4"];
+  for (const altExt of exts) {
+    if (altExt !== ext.toLowerCase()) {
+      candidates.push(path.join(dir, base + altExt));
+      if (base.endsWith("-1")) {
+        candidates.push(path.join(dir, base.slice(0, -2) + altExt));
+      } else {
+        candidates.push(path.join(dir, base + "-1" + altExt));
+      }
+    }
+  }
+
+  for (const cand of candidates) {
+    if (cand.startsWith(root) && fs.existsSync(cand) && fs.statSync(cand).isFile()) {
+      return cand;
+    }
+  }
+
+  return null;
+}
+
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, `http://localhost:${activePort}`);
   const decodedPath = decodeURIComponent(url.pathname);
@@ -79,21 +119,24 @@ const server = http.createServer((req, res) => {
   }
 
   const relativePath = decodedPath === "/" ? "index.html" : decodedPath.slice(1);
-  const filePath = path.resolve(root, relativePath);
+  const rawPath = path.resolve(root, relativePath);
 
-  if (!filePath.startsWith(root)) {
+  if (!rawPath.startsWith(root)) {
     return send(res, 403, "Forbidden");
   }
 
-  fs.stat(filePath, (statError, stat) => {
-    if (statError || !stat.isFile()) {
-      return send(res, 404, "Not found");
-    }
+  const resolved = resolveStaticFile(rawPath);
+  if (!resolved) {
+    return send(res, 404, "Not found");
+  }
 
-    const type = types[path.extname(filePath).toLowerCase()] || "application/octet-stream";
-    res.writeHead(200, { "Content-Type": type });
-    fs.createReadStream(filePath).pipe(res);
+  const ext = path.extname(resolved).toLowerCase();
+  const type = types[ext] || "application/octet-stream";
+  res.writeHead(200, {
+    "Content-Type": type,
+    "Cache-Control": "no-cache"
   });
+  fs.createReadStream(resolved).pipe(res);
 });
 
 function listen(port) {
