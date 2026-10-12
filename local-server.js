@@ -71,8 +71,18 @@ function buildPortfolioManifest() {
 }
 
 function resolveStaticFile(targetPath) {
-  if (fs.existsSync(targetPath) && fs.statSync(targetPath).isFile()) {
-    return targetPath;
+  if (fs.existsSync(targetPath)) {
+    const stat = fs.statSync(targetPath);
+    if (stat.isFile()) return targetPath;
+    if (stat.isDirectory()) {
+      const idx = path.join(targetPath, "index.html");
+      if (fs.existsSync(idx) && fs.statSync(idx).isFile()) return idx;
+    }
+  }
+
+  // Check with .html extension (e.g. /todos-os-projetos -> todos-os-projetos.html)
+  if (fs.existsSync(targetPath + ".html") && fs.statSync(targetPath + ".html").isFile()) {
+    return targetPath + ".html";
   }
 
   const dir = path.dirname(targetPath);
@@ -118,6 +128,11 @@ const server = http.createServer((req, res) => {
     return sendJson(res, 200, buildPortfolioManifest());
   }
 
+  // Mock WordPress REST API and AJAX endpoints if pinged
+  if (decodedPath.startsWith("/wp-json/") || decodedPath === "/wp-admin/admin-ajax.php") {
+    return sendJson(res, 200, {});
+  }
+
   const relativePath = decodedPath === "/" ? "index.html" : decodedPath.slice(1);
   const rawPath = path.resolve(root, relativePath);
 
@@ -127,6 +142,25 @@ const server = http.createServer((req, res) => {
 
   const resolved = resolveStaticFile(rawPath);
   if (!resolved) {
+    const ext = path.extname(decodedPath).toLowerCase();
+    // Prevent "Unexpected token '<'" when client expects valid JS or JSON
+    if (ext === ".js" || decodedPath.endsWith(".bundle.min.js")) {
+      res.writeHead(200, {
+        "Content-Type": "text/javascript; charset=utf-8",
+        "Cache-Control": "no-cache",
+      });
+      return res.end("/* not found */");
+    }
+    if (ext === ".json") {
+      return sendJson(res, 200, {});
+    }
+    if (ext === ".css") {
+      res.writeHead(200, {
+        "Content-Type": "text/css; charset=utf-8",
+        "Cache-Control": "no-cache",
+      });
+      return res.end("/* not found */");
+    }
     return send(res, 404, "Not found");
   }
 
