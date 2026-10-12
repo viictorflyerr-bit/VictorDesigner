@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 const root = process.cwd();
-const preferredPort = Number(process.env.PORT || 3000);
+const preferredPort = 3000;
 let activePort = preferredPort;
 
 const types = {
@@ -166,9 +166,10 @@ const server = http.createServer((req, res) => {
 
   const ext = path.extname(resolved).toLowerCase();
   const type = types[ext] || "application/octet-stream";
+  const isMedia = imageExtensions.has(ext) || ext === ".svg" || ext === ".ico";
   res.writeHead(200, {
     "Content-Type": type,
-    "Cache-Control": "no-cache"
+    "Cache-Control": isMedia ? "public, max-age=86400" : "no-cache"
   });
   fs.createReadStream(resolved).pipe(res);
 });

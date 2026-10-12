@@ -28,6 +28,10 @@
 	<link rel="dns-prefetch" href="https://i.postimg.cc" />
 	<link rel="preconnect" href="https://i.ibb.co" crossorigin />
 	<link rel="dns-prefetch" href="https://i.ibb.co" />
+	<!-- Preload das capas do topo para carregamento instantâneo -->
+	<link rel="preload" as="image" href="/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/00_capa.png" fetchpriority="high" />
+	<link rel="preload" as="image" href="/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/00_capa.jpg" fetchpriority="high" />
+	<link rel="preload" as="image" href="/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/00_capa.png" fetchpriority="high" />
 	
 	<link data-minify="1" rel='stylesheet' id='hello-elementor-css' href='/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/reset.css?ver=1779831945' media='all' />
 	<link data-minify="1" rel='stylesheet' id='hello-elementor-theme-style-css' href='/wp-content/cache/min/1/wp-content/themes/hello-elementor/assets/css/theme.css?ver=1779831945' media='all' />
@@ -235,6 +239,22 @@
 		.page-footer a:hover {
 			text-decoration: underline;
 		}
+
+		/* Otimização de renderização rápida das imagens */
+		.victor-portfolio__media {
+			background: radial-gradient(circle at center, rgba(0, 126, 255, 0.18) 0%, rgba(2, 11, 31, 0.95) 70%);
+			transition: background 0.3s ease;
+		}
+
+		.victor-portfolio__media img {
+			opacity: 1;
+			transition: opacity 0.3s ease;
+			will-change: opacity;
+		}
+
+		.victor-portfolio__media img:not([src]) {
+			opacity: 0;
+		}
 	</style>
 </head>
 <body>
@@ -266,11 +286,29 @@
 		<div class="victor-portfolio__grid gallery-grid" id="all-projects-grid">
 			<!-- Identidade Visual - Camila Sunglass -->
 			<article class="victor-portfolio__card hover-scale">
-				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Identidade Visual - Camila Sunglass" data-category="Identidade Visual" data-gallery-key="Identidade Visual - Camila Sunglass" data-cover="https://i.postimg.cc/2yvVPYcg/Capa.png" data-gallery="https://i.postimg.cc/vBC4qThM/01.jpg|https://i.postimg.cc/TwBK719n/02.jpg|https://i.postimg.cc/85x7KcHx/03.jpg|https://i.postimg.cc/V62JGvgc/04.jpg|https://i.postimg.cc/fL1V2yCs/05.jpg|https://i.postimg.cc/zvWV9NtM/06.jpg">
-					<img src="https://i.postimg.cc/2yvVPYcg/Capa.png" alt="Capa Identidade Visual - Camila Sunglass" fetchpriority="high" decoding="async" referrerpolicy="no-referrer" onerror="if(this.src!=='/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/00_capa.png')this.src='/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/00_capa.png';">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Identidade Visual - Camila Sunglass" data-category="Identidade Visual" data-gallery-key="Identidade Visual - Camila Sunglass" data-cover="/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/00_capa.png" data-gallery="/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/01.jpg|/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/02.jpg|/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/03.jpg|/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/04.jpg|/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/05.jpg|/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/06.jpg">
+					<img src="/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/00_capa.png" alt="Capa Identidade Visual - Camila Sunglass" fetchpriority="high" decoding="async" onerror="if(this.src!=='https://i.postimg.cc/2yvVPYcg/Capa.png')this.src='https://i.postimg.cc/2yvVPYcg/Capa.png';">
 					<span hidden>Identidade Visual - Camila Sunglass</span>
 				</button>
 				<div class="victor-portfolio__content"><h3>Identidade Visual - Camila Sunglass</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- Desporto Sem Filtros Podcast -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Desporto Sem Filtros Podcast" data-category="Podcast &amp; Identidade Visual" data-gallery-key="Desporto Sem Filtros Podcast" data-cover="/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/00_capa.jpg" data-gallery="/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/01.jpg|/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/02.jpg|/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/03.jpg|/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/04.jpg|/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/05.jpg|/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/06.jpg|/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/07.jpg">
+					<img src="/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/00_capa.jpg" alt="Capa Desporto Sem Filtros Podcast" fetchpriority="high" decoding="async" onerror="if(this.src!=='https://i.postimg.cc/VLjZ9HBM/imgi-163-209bd0256879431-6ac8e58c5a6a3-mini.jpg')this.src='https://i.postimg.cc/VLjZ9HBM/imgi-163-209bd0256879431-6ac8e58c5a6a3-mini.jpg';">
+					<span hidden>Desporto Sem Filtros Podcast</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Desporto Sem Filtros Podcast</h3><p>Clique para ver mais</p></div>
+			</article>
+
+			<!-- Social Media - Equipe de Futebol -->
+			<article class="victor-portfolio__card hover-scale">
+				<button class="victor-portfolio__media js-portfolio-open" type="button" data-title="Social Media - Equipe de Futebol" data-category="Social Media" data-gallery-key="Social Media - Equipe de Futebol" data-cover="/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/00_capa.png" data-gallery="/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/01.jpg|/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/02.jpg|/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/03.jpg|/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/04.jpg|/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/05.jpg|/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/06.jpg|/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/07.jpg">
+					<img src="/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/00_capa.png" alt="Capa Social Media - Equipe de Futebol" fetchpriority="high" decoding="async" onerror="if(this.src!=='https://i.postimg.cc/vHfqbS4x/01.png')this.src='https://i.postimg.cc/vHfqbS4x/01.png';">
+					<span hidden>Social Media - Equipe de Futebol</span>
+				</button>
+				<div class="victor-portfolio__content"><h3>Social Media - Equipe de Futebol</h3><p>Clique para ver mais</p></div>
 			</article>
 
 			<!-- 6 Primeiros Novos Cards -->
@@ -489,6 +527,41 @@
 
 		applyPortfolioCovers();
 
+		const fallbackUrlMap = {
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/00_capa.jpg': 'https://i.postimg.cc/VLjZ9HBM/imgi-163-209bd0256879431-6ac8e58c5a6a3-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/01.jpg': 'https://i.postimg.cc/Kvnp7sr3/imgi-142-5ad757256879431-6ac8e58c56b4d-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/02.jpg': 'https://i.postimg.cc/QxpYgnk9/imgi-145-04996d256879431-6ac8e58c59e0c-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/03.jpg': 'https://i.postimg.cc/7Ygt1QM5/imgi-148-bd6ca3256879431-6ac8e58c57021-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/04.jpg': 'https://i.postimg.cc/zG8txS0F/imgi-151-36966b256879431-6ac8e58c57a5e-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/05.jpg': 'https://i.postimg.cc/mgjdJznr/imgi-154-f9adad256879431-6ac8e58c592d6-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/06.jpg': 'https://i.postimg.cc/tggrjR0Y/imgi-157-926a79256879431-6ac8e58c57fab-mini.jpg',
+			'/wp-content/uploads/portfolio/Desporto%20Sem%20Filtros%20Podcast/07.jpg': 'https://i.postimg.cc/g00MWc98/imgi-160-579150256879431-6ac8e58c5750a-mini.jpg',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/00_capa.png': 'https://i.postimg.cc/2yvVPYcg/Capa.png',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/01.jpg': 'https://i.postimg.cc/vBC4qThM/01.jpg',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/02.jpg': 'https://i.postimg.cc/TwBK719n/02.jpg',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/03.jpg': 'https://i.postimg.cc/85x7KcHx/03.jpg',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/04.jpg': 'https://i.postimg.cc/V62JGvgc/04.jpg',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/05.jpg': 'https://i.postimg.cc/fL1V2yCs/05.jpg',
+			'/wp-content/uploads/portfolio/Identidade%20Visual%20-%20Camila%20Sunglass/06.jpg': 'https://i.postimg.cc/zvWV9NtM/06.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/00_capa.png': 'https://i.postimg.cc/vHfqbS4x/01.png',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/01.jpg': 'https://i.postimg.cc/4xcf1GFT/ARTE-AMISTOSO-CONFIRMADO-2-mini.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/02.jpg': 'https://i.postimg.cc/q7dkbFWD/ARTE-AMISTOSO-CONFIRMADO-mini.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/03.jpg': 'https://i.postimg.cc/Pqkt3703/ARTE-COPA-SAPEENSE-PROXIMA-PARTIDA-mini.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/04.jpg': 'https://i.postimg.cc/JhW16F9M/ARTE-NOVO-CONTRATADO-FEED-mini.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/05.jpg': 'https://i.postimg.cc/LsMHCWrm/ARTE-PENEIRA-FEED-mini.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/06.jpg': 'https://i.postimg.cc/KYyZqWdR/ARTE-SEJA-NOSSO-PATROCINADOR-mini.jpg',
+			'/wp-content/uploads/portfolio/Social%20Media%20-%20Equipe%20de%20Futebol/07.jpg': 'https://i.postimg.cc/7LyxsRp5/ARTE-TORNEIO-DE-PENALTI-mini.jpg'
+		};
+
+		function getFallbackUrl(url) {
+			if (!url) return '';
+			if (fallbackUrlMap[url]) return fallbackUrlMap[url];
+			for (const [localUrl, remoteUrl] of Object.entries(fallbackUrlMap)) {
+				if (remoteUrl === url) return localUrl;
+			}
+			return '';
+		}
+
 		function showImage(resetErrors = true) {
 			if (resetErrors) failedAttempts = 0;
 			const src = gallery[index];
@@ -527,12 +600,21 @@
 			if (image) {
 				image.hidden = false;
 				image.alt = currentTitle + ' - arte ' + (index + 1);
+				delete image.dataset.triedFallback;
 
 				image.onload = () => {
 					if (stage) stage.classList.remove('is-loading');
 				};
 
 				image.onerror = () => {
+					const cur = image.getAttribute('src');
+					const altUrl = getFallbackUrl(cur);
+					if (altUrl && image.src !== altUrl && !image.dataset.triedFallback) {
+						image.dataset.triedFallback = '1';
+						image.src = altUrl;
+						return;
+					}
+					delete image.dataset.triedFallback;
 					if (stage) stage.classList.remove('is-loading');
 					if (gallery.length < 2 || failedAttempts >= gallery.length - 1) return;
 					failedAttempts += 1;
@@ -550,6 +632,20 @@
 			}
 		}
 
+		function preloadImage(url) {
+			if (!url || isVideoUrl(url)) return;
+			const preloader = new Image();
+			preloader.src = url;
+		}
+
+		function preloadNeighbors() {
+			if (!gallery || gallery.length <= 1) return;
+			const nextIdx = (index + 1) % gallery.length;
+			const prevIdx = (index - 1 + gallery.length) % gallery.length;
+			preloadImage(gallery[nextIdx]);
+			preloadImage(gallery[prevIdx]);
+		}
+
 		function openLightbox(button) {
 			gallery = buildGallery(button);
 			if (!gallery.length) return;
@@ -560,6 +656,7 @@
 			lightbox.classList.add('is-open');
 			lightbox.setAttribute('aria-hidden', 'false');
 			document.documentElement.classList.add('victor-lightbox-open');
+			preloadNeighbors();
 		}
 
 		function closeLightbox() {
@@ -578,12 +675,18 @@
 			if (!gallery.length) return;
 			index = (index + direction + gallery.length) % gallery.length;
 			showImage();
+			preloadNeighbors();
 		}
 
 		document.querySelectorAll('.js-portfolio-open').forEach((button) => {
 			button.addEventListener('click', () => {
 				openLightbox(button);
 			});
+			// Pré-carrega a primeira imagem ao passar o mouse ou focar no card
+			button.addEventListener('mouseenter', () => {
+				const g = buildGallery(button);
+				if (g && g[0]) preloadImage(g[0]);
+			}, { once: true });
 		});
 
 		lightbox.querySelectorAll('[data-lightbox-close]').forEach((button) => {
